@@ -30,33 +30,7 @@ $endif$
 %\fi
 \makeatother
 
-\makeatletter
-\@ifpackageloaded{hyperref}{}{%
-\ifxetex
-  \usepackage[setpagesize=false, % page size defined by xetex
-              unicode=false, % unicode breaks when used with xetex
-              xetex]{hyperref}
-\else
-  \usepackage[unicode=true]{hyperref}
-\fi
-}
-\@ifpackageloaded{color}{
-    \PassOptionsToPackage{usenames,dvipsnames}{color}
-}{%
-    \usepackage[usenames,dvipsnames]{color}
-}
-\makeatother
-\hypersetup{breaklinks=true,
-            bookmarks=true,
-            pdfauthor={$for(author)$$author.name$ ($author.affiliation$)$sep$ and $endfor$},
-             pdfkeywords = {$if(keywords)$$keywords$$endif$},  
-            pdftitle={$title$$if(subtitle)$: $subtitle$$endif$},
-            colorlinks=true,
-            citecolor=$if(citecolor)$$citecolor$$else$blue$endif$,
-            urlcolor=$if(urlcolor)$$urlcolor$$else$blue$endif$,
-            linkcolor=$if(linkcolor)$$linkcolor$$else$magenta$endif$,
-            pdfborder={0 0 0}}
-\urlstyle{same}  % don't use monospace font for urls
+
 
 
 \setcounter{secnumdepth}{0}
@@ -127,6 +101,34 @@ $endif$
 
 \newtheorem{hypothesis}{Hypothesis}
 \usepackage{setspace}
+
+\makeatletter
+\@ifpackageloaded{hyperref}{}{%
+\ifxetex
+  \usepackage[setpagesize=false, % page size defined by xetex
+              unicode=false, % unicode breaks when used with xetex
+              xetex]{hyperref}
+\else
+  \usepackage[unicode=true]{hyperref}
+\fi
+}
+\@ifpackageloaded{color}{
+    \PassOptionsToPackage{usenames,dvipsnames}{color}
+}{%
+    \usepackage[usenames,dvipsnames]{color}
+}
+\makeatother
+\hypersetup{breaklinks=true,
+            bookmarks=true,
+            pdfauthor={$for(author)$$author.name$ ($author.affiliation$)$sep$ and $endfor$},
+             pdfkeywords = {$if(keywords)$$keywords$$endif$},  
+            pdftitle={$title$$if(subtitle)$: $subtitle$$endif$},
+            colorlinks=true,
+            citecolor=$if(citecolor)$$citecolor$$else$blue$endif$,
+            urlcolor=$if(urlcolor)$$urlcolor$$else$blue$endif$,
+            linkcolor=$if(linkcolor)$$linkcolor$$else$magenta$endif$,
+            pdfborder={0 0 0}}
+\urlstyle{same}  % don't use monospace font for urls
 
 \begin{document}  
 
