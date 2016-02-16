@@ -31,6 +31,10 @@ $endif$
 \makeatother
 
 
+$if(appendix)$
+\renewcommand*\thetable{A.\arabic{table}}
+\renewcommand*\thefigure{A.\arabic{figure}}
+$endif$
 
 
 \setcounter{secnumdepth}{0}
