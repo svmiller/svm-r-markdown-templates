@@ -5,4 +5,4 @@ I love R Markdown and effectively abandoned LaTeX for it. I have a suite of R Ma
  
 ## Related Reading
 
-- [http://svmiller.com/blog/2016/02/svm-r-markdown-manuscript/](An R Markdown Template for Academic Manuscripts)
+- [An R Markdown Template for Academic Manuscripts](http://svmiller.com/blog/2016/02/svm-r-markdown-manuscript/])()
