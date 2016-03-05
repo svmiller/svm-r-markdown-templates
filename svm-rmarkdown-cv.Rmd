@@ -1,8 +1,6 @@
 ---
 output: 
   pdf_document:
-    keep_tex: true
-    fig_caption: yes
     latex_engine: pdflatex
     template: ~/Dropbox/miscelanea/svm-r-markdown-templates/svm-latex-cv.tex
 geometry: margin=1in
@@ -65,7 +63,7 @@ Student. 1926. "Mathematics and Agronomy." *Journal of the American Society of A
 
 Student. 1925. "New Tables for Testing the Significance of Observations." *Metron* 5(3): 105--108.
 
-Student. 1923. "On Testing Varities of Cereals." *Biometrika* 15(3-4): 271--293.
+Student. 1923. "On Testing Varieties of Cereals." *Biometrika* 15(3-4): 271--293.
 
 Student. 1921. "An Experimental Determination of the Probable Error of Dr. Spearman's Correlation Co-efficient" *Biometrika* 13(2-3): 263--282.
 
