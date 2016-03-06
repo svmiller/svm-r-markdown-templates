@@ -6,7 +6,7 @@ output:
 geometry: margin=1in
 
 title: "CV"
-author: William Sealy Gossett
+author: William Sealy Gosset
 
 jobtitle: "Chief Brewer, Arthur Guinness & Son"
 address: "Guinness Brewery · Park Royal · London NW10 7RR, UK"
