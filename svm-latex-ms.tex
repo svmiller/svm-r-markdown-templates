@@ -6,6 +6,13 @@ $if(fontfamily)$
 $else$
 \usepackage{lmodern}
 $endif$
+
+
+  \usepackage[$if(fontenc)$$fontenc$$else$T1$endif$]{fontenc}
+  \usepackage[utf8]{inputenc}
+
+
+
 \usepackage{abstract}
 \renewcommand{\abstractname}{}    % clear the title
 \renewcommand{\absnamepos}{empty} % originally center
@@ -32,8 +39,8 @@ $endif$
 
 
 $if(appendix)$
-\renewcommand*\thetable{A.\arabic{table}}
-\renewcommand*\thefigure{A.\arabic{figure}}
+\renewcommand*\thetable{$appendixletter$.\arabic{table}}
+\renewcommand*\thefigure{$appendixletter$.\arabic{figure}}
 $endif$
 
 
@@ -134,7 +141,12 @@ $endif$
             pdfborder={0 0 0}}
 \urlstyle{same}  % don't use monospace font for urls
 
-\begin{document}  
+\begin{document}
+	
+% \pagenumbering{arabic}% resets `page` counter to 1 
+%$if(appendix)$
+%\renewcommand*{\thepage}{$appendixletter$--\arabic{page}}
+%$endif$    
 
 $if(title)$
 % \maketitle
@@ -149,7 +161,7 @@ $if(title)$
 
 {
    \vskip 13.5pt\relax \normalsize\fontsize{11}{12} 
-$for(author)$\textbf{\authorfont $author.name$} \hskip 15pt \emph{\small $author.affiliation$}  $sep$ \par $endfor$
+$if(anonymous)$\hfill $else$$for(author)$\textbf{\authorfont $author.name$} \hskip 15pt \emph{\small $author.affiliation$}  $sep$ \par $endfor$ $endif$
 
 }
 
@@ -197,10 +209,11 @@ $endif$
 
 \vskip 6.5pt
 
-\noindent $if(spacing)$\$spacing$spacing$endif$ $body$
+\noindent $if(anonymous)$\doublespacing$else$$if(spacing)$\$spacing$spacing$endif$$endif$ $body$
 
 
-\newpage 
+\newpage
+\singlespacing 
 $if(natbib)$
 $if(bibliography)$
 $if(biblio-title)$
