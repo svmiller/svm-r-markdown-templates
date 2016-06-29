@@ -76,7 +76,7 @@ $if(graphics)$
 $endif$
 
 $if(title)$
-\title{$title$$if(subtitle)$: $subtitle$$endif$$if(thanks)$\thanks{$thanks$} $endif$ }
+\title{$title$$if(subtitle)$: $subtitle$$endif$ $if(anonymous)$$else$$if(thanks)$\thanks{$thanks$} $endif$$endif$ }
 $endif$ 
 
 
@@ -94,10 +94,12 @@ $endif$
 \titleformat*{\paragraph}{\normalsize\itshape}
 \titleformat*{\subparagraph}{\normalsize\itshape}
 
+
 $if(natbib)$
 \usepackage{natbib}
 \bibliographystyle{$if(biblio-style)$$biblio-style$$else$plainnat$endif$}
 $endif$
+
 $if(biblatex)$
 \usepackage$if(biblio-style)$[style=$biblio-style$]$endif${biblatex}
 $if(biblatexoptions)$\ExecuteBibliographyOptions{$for(biblatexoptions)$$biblatexoptions$$sep$,$endfor$}$endif$
@@ -131,7 +133,7 @@ $endif$
 \makeatother
 \hypersetup{breaklinks=true,
             bookmarks=true,
-            pdfauthor={$for(author)$$author.name$ ($author.affiliation$)$sep$ and $endfor$},
+            pdfauthor={$if(anonymous)$$else$$for(author)$$author.name$ ($author.affiliation$)$sep$ and $endfor$$endif$},
              pdfkeywords = {$if(keywords)$$keywords$$endif$},  
             pdftitle={$title$$if(subtitle)$: $subtitle$$endif$},
             colorlinks=true,
@@ -210,7 +212,6 @@ $endif$
 \vskip 6.5pt
 
 \noindent $if(anonymous)$\doublespacing$else$$if(spacing)$\$spacing$spacing$endif$$endif$ $body$
-
 
 \newpage
 \singlespacing 
