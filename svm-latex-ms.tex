@@ -81,7 +81,7 @@ $endif$
 
 
 
-\author{$for(author)$\Large $author.name$\vspace{0.05in} \newline\normalsize\emph{$author.affiliation$}  $sep$ \and $endfor$}
+$if(anonymous)$$else$\author{$for(author)$\Large $author.name$\vspace{0.05in} \newline\normalsize\emph{$author.affiliation$}  $sep$ \and $endfor$}$endif$
 
 
 \date{}
@@ -142,6 +142,11 @@ $endif$
             linkcolor=$if(linkcolor)$$linkcolor$$else$magenta$endif$,
             pdfborder={0 0 0}}
 \urlstyle{same}  % don't use monospace font for urls
+
+$for(header-includes)$
+$header-includes$
+$endfor$
+
 
 \begin{document}
 	
