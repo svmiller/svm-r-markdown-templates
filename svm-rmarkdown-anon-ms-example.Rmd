@@ -11,7 +11,7 @@ runhead: "A Running Head"
 thanks: "Replication files are available on the author's Github account (http://github.com/svmiller). **Current version**: `r format(Sys.time(), '%B %d, %Y')`; **Corresponding author**: svmille@clemson.edu."
 author:
 - name: Steven V. Miller
-- affiliation: Clemson University
+  affiliation: Clemson University
 abstract: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin fermentum blandit felis. Nam consequat ultricies porta. Phasellus aliquet metus quis enim aliquet, id suscipit justo mollis. Vivamus dapibus erat a urna hendrerit, eu bibendum risus pretium. Praesent sit amet elementum augue, ac iaculis eros. Praesent sollicitudin pulvinar tellus ac fermentum. Integer porttitor vestibulum orci, id hendrerit turpis fringilla eu. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque sit amet pellentesque odio. Nam vitae lacinia tellus. Phasellus sit amet metus vel ipsum efficitur viverra. Nullam malesuada libero eu justo egestas efficitur. Proin eu elit ut dolor egestas consequat. Maecenas pretium, purus aliquet finibus pellentesque, mauris eros tempor magna, eget dignissim magna ligula accumsan erat. Etiam."
 keywords: "pandoc, r markdown, knitr"
 date: "`r format(Sys.time(), '%B %d, %Y')`"
