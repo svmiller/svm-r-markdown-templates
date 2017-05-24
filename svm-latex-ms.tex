@@ -147,6 +147,11 @@ $for(header-includes)$
 $header-includes$
 $endfor$
 
+$if(endnotes)$
+\usepackage{endnotes}
+\renewcommand{\enotesize}{\normalsize}
+\let\footnote=\endnote
+$endif$
 
 \begin{document}
 	
@@ -217,6 +222,12 @@ $endif$
 \vskip 6.5pt
 
 \noindent $if(anonymous)$\doublespacing$else$$if(spacing)$\$spacing$spacing$endif$$endif$ $body$
+
+$if(endnotes)$
+\newpage
+
+\theendnotes
+$endif$
 
 \newpage
 \singlespacing 
