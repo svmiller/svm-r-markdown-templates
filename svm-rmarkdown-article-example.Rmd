@@ -5,7 +5,7 @@ output:
     keep_tex: true
     fig_caption: true
     latex_engine: pdflatex
-    template: ~/Dropbox/miscelanea/svm-r-markdown-templates/svm.latex.ms.tex
+    template: ~/Dropbox/miscelanea/svm-r-markdown-templates/svm-latex-ms.tex
 title: "A Pandoc Markdown Article Starter and Template"
 thanks: "Replication files are available on the author's Github account (http://github.com/svmiller). **Current version**: `r format(Sys.time(), '%B %d, %Y')`; **Corresponding author**: svmille@clemson.edu."
 author:
@@ -20,6 +20,7 @@ fontsize: 11pt
 # spacing: double
 bibliography: ~/Dropbox/master.bib
 biblio-style: apsr
+endnote: no
 ---
 
 # Introduction
@@ -44,7 +45,7 @@ output:
     keep_tex: true
     fig_caption: true
     latex_engine: pdflatex
-    template: ~/Dropbox/miscelanea/svm-r-markdown-templates/svm.latex.ms.tex
+    template: ~/Dropbox/miscelanea/svm-r-markdown-templates/svm-latex-ms.tex
 title: "A Pandoc Markdown Article Starter and Template"
 thanks: "Replication files are available on the author's Github account..."
 author:
