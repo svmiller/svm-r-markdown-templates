@@ -118,13 +118,14 @@ $endif$
 \makeatletter
 \@ifpackageloaded{hyperref}{}{%
 \ifxetex
-  \usepackage[setpagesize=false, % page size defined by xetex
+  \PassOptionsToPackage{hyphens}{url}\usepackage[setpagesize=false, % page size defined by xetex
               unicode=false, % unicode breaks when used with xetex
               xetex]{hyperref}
 \else
-  \usepackage[unicode=true]{hyperref}
+  \PassOptionsToPackage{hyphens}{url}\usepackage[unicode=true]{hyperref}
 \fi
 }
+
 \@ifpackageloaded{color}{
     \PassOptionsToPackage{usenames,dvipsnames}{color}
 }{%
@@ -152,6 +153,10 @@ $if(endnotes)$
 \renewcommand{\enotesize}{\normalsize}
 \let\footnote=\endnote
 $endif$
+
+% add tightlist ----------
+\providecommand{\tightlist}{%
+\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 
 \begin{document}
 	
