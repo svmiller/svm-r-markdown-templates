@@ -188,13 +188,7 @@ $if(anonymous)$\hfill $else$$for(author)$\textbf{\authorfont $author.name$} \hsk
 
 $endif$
 
-$if(toc)$
-{
-\hypersetup{linkcolor=black}
-\setcounter{tocdepth}{$toc-depth$}
-\tableofcontents
-}
-$endif$
+
 
 $if(abstract)$
 
@@ -227,6 +221,14 @@ $endif$
 
 \vskip 6.5pt
 
+$if(toc)$
+{
+\hypersetup{linkcolor=black}
+\setcounter{tocdepth}{$toc-depth$}
+\tableofcontents
+}
+$endif$
+
 \noindent $if(anonymous)$\doublespacing$else$$if(spacing)$\$spacing$spacing$endif$$endif$ $body$
 
 $if(endnotes)$
@@ -234,6 +236,8 @@ $if(endnotes)$
 
 \theendnotes
 $endif$
+
+
 
 \newpage
 \singlespacing 
