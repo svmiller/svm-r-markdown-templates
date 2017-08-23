@@ -14,7 +14,7 @@ output:
  ioslides_presentation:
     smaller: true
     logo: ~/Dropbox/teaching/clemson-paw-transparent.png
-make169: true
+make149: true
 ---
 
 <style>
