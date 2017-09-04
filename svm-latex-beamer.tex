@@ -294,6 +294,23 @@ $if(titlegraphic)$\titlegraphic{\includegraphics[width=0.3\paperwidth]{\string~$
 \setbeamertemplate{itemize subitem}{\color{clemsonpurple}\scriptsize{$$\bullet$$}}
 \setbeamertemplate{itemize/enumerate body end}{\vspace{.6\baselineskip}} % So I'm less inclined to use \medskip and \bigskip in Markdown.
 
+% Automatically center images
+% ---------------------------
+% Note: this is for ![](image.png) images
+% Use "fig.align = "center" for R chunks
+
+\usepackage{etoolbox}
+
+\AtBeginDocument{%
+  \letcs\oig{@orig\string\includegraphics}%
+  \renewcommand<>\includegraphics[2][]{%
+    \only#3{%
+      {\centering\oig[{#1}]{#2}\par}%
+    }%
+  }%
+}
+
+
 % Okay, and begin the actual document...
 
 \begin{document}
