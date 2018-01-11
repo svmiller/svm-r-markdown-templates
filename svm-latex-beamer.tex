@@ -198,7 +198,7 @@ $endfor$
 \usepackage[normalem]{ulem}
 %\mode<presentation>
 \usepackage{wasysym}
-\usepackage{amsmath}
+%\usepackage{amsmath}
 
 
 % Get rid of navigation symbols.
@@ -310,6 +310,16 @@ $if(titlegraphic)$\titlegraphic{\includegraphics[width=0.3\paperwidth]{\string~$
   }%
 }
 
+% I think I've moved to xelatex now. Here's some stuff for that.
+% --------------------------------------------------------------
+% I could customize/generalize this more but the truth is it works for my circumstances.
+
+\ifxetex
+\setbeamerfont{title}{family=\fontspec{$if(titlefont)$$titlefont$$else$serif$endif$}}
+\setbeamerfont{frametitle}{family=\fontspec{$if(titlefont)$$titlefont$$else$serif$endif$}}
+\usepackage[font=small,skip=0pt]{caption}
+ \else
+ \fi
 
 % Okay, and begin the actual document...
 
