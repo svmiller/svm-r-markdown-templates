@@ -1,0 +1,386 @@
+---
+title: "Steve's Xaringan Presentation"
+subtitle: "POSC 0000 -- It Would Be Cool If This Were an Actual Class Presentation"
+author: "Steven V. Miller<br /> <br /> <br /> Department of Political Science"
+institute: Department of Political Science
+output:
+  xaringan::moon_reader:
+    css: ["default", "~/Dropbox/miscelanea/svm-r-markdown-templates/svm-xaringan-style.css"]
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(dev = 'svg')
+options(device = function(file, width, height) {
+  svg(tempfile(), width = width, height = height)
+})
+library(tidyverse)
+library(stevemisc)
+```
+
+
+
+# Install Xaringan First
+
+Install the **xaringan** package from [Github](https://github.com/yihui/xaringan):
+
+```{r eval=FALSE, tidy=FALSE}
+devtools::install_github("yihui/xaringan")
+```
+
+
+You are recommended to use the [RStudio IDE](https://www.rstudio.com/products/rstudio/), but you do not have to.
+
+- Create a new R Markdown document from the menu `File -> New File -> R Markdown -> From Template -> Ninja Presentation`;<sup>1</sup>
+- Click the `Knit` button to compile it.
+
+---
+
+# remark.js Maximizes the Presentation Value
+
+Press `h` or `?` to see  controls you have in remark.js.
+
+Hit `Esc` to exit that screen.
+
+
+
+---
+
+class: center, middle
+
+# You can do this to your slides if you want
+## Add `class: center, middle` to the start of your slide.
+### Perhaps you want the appearance of a secondary title slide, which is what this will do.
+
+For example, check this out...
+
+---
+
+class: center, middle
+
+# Pop Music and Political Science
+## POSC 0000 -- It Would Be Cool If This Were an Actual Class Presentation
+### I am not funny and you will be forgiven for thinking of me as impossibly uncool.
+
+
+
+---
+
+# Sheena Easton and Total Conflict
+
+Sheena Easton describes the following scenario for her baby:
+
+- Takes the morning train
+- Works from nine 'til five
+- Takes another train home again
+- Finds Sheena Easton waiting for him
+
+--
+
+Sheena Easton and her baby are playing a **zero-sum (total conflict)** game.
+
+- Akin to Holmes-Moriarty game (see: von Neumann and Morgenstern), or "matching pennies."
+- Useful for modeling strategic counterterrorism dilemmas between a government and terrorist group.
+
+
+---
+
+# A Total Conflict Between Sheena Easton and Her Baby
+
+|                         | Sheena Easton Stays Home       | Sheena Easton Goes to Baby's Work |
+|-------------------------|---------------------|------------------|
+| **Baby Home Again**          |  -100, **100**         |  **100**, 0       |
+| **Baby Stays at Work**             |   **50**, 0        |  -100, **100**        |
+
+--
+
+<br />
+
+Notice we have no pure strategies, and no Nash equilibrium.
+
+- Sheena Easton wants to proverbially "match pennies."
+- Her baby has diametrically opposed preferences, fearing for his safety.
+
+Solution: mixed strategy.
+
+---
+background-image: url(https://media.giphy.com/media/dqZSIfquVhSg0/giphy.gif)
+background-position: 50% 50%
+background-size: 100%
+class: center, bottom, fullscale
+
+# Run...
+
+---
+
+# Congressman Astley's Re-election Platform
+
+Assume Congressman Astley presides over a competitive district in which he seeks reappointment. He promises he's:
+
+- Never gonna give you up.
+- Never gonna let you down.
+- Never gonna run around and desert you.
+- Never gonna make you cry.
+- Never gonna say goodbye.
+- Never gonna tell a lie and hurt you.
+
+Are these promises (if credible) sufficient to secure re-election?
+
+---
+
+```{r, eval = T, echo = F, fig.width=11, fig.height = 8, message=F, dev='svg', fig.cap = "SDFSFDSFS"}
+
+df <- data.frame(x = rnorm(1000))
+x <- df$x
+
+ggplot(df, aes(x)) + 
+  theme_steve_web() +
+  stat_function(fun = dnorm, colour = "black") +
+  scale_x_continuous(limits = c(-4, 4), 
+                     breaks = c(-4,  0,  4),
+                     labels = c("Complete\nEmotional\nNeglect", 
+                                "Never Gonna Give You Up\nLet You Down\nRun Around and Desert You\n(Preference of Median Voter)",
+                                "Maximum\nEmotional\nSupport")) +
+  geom_vline(xintercept = 0) +
+  geom_vline(xintercept = 1, linetype="dashed") +
+  geom_vline(xintercept = -2, linetype = "dashed") +
+  geom_vline(xintercept = -.5, linetype = "dotted") +
+  scale_y_continuous(limits = c(0, .5), breaks = NULL, label=NULL) +
+  xlab("A Unidimensional Continuum of the Policy Space of Emotional Support") +
+  ylab("") +
+  stat_function(fun = dnorm, 
+                xlim = c(-4,-2),
+                size=0,
+                geom = "area", fill="#f8766d", alpha=1) +
+  stat_function(fun = dnorm, 
+                xlim = c(1, 4),
+                size=0,
+                geom = "area", fill="#619cff", alpha=1)  +
+  stat_function(fun = dnorm, 
+                xlim = c(-.5, 1),
+                size=0,
+                geom = "area", fill="#619cff", alpha=.4) +
+  stat_function(fun = dnorm, 
+                xlim = c(-2, -.5),
+                size=0,
+                geom = "area", fill="#f8766d", alpha=.4) +
+  annotate("text", label="Astley's rival is promising\nfar less in the (public?) good\nof emotional support",
+           size = 3.5, family="Open Sans",
+           x = -2.1, y = .4,
+           hjust = 1) +
+  annotate("text", 
+           label="Congressman Astley is pledging\nmore emotional support\n(i.e. never gonna make you cry/say goodbye/tell a lie/hurt you)\nthan most his constituents want",
+           size = 3.5, family="Open Sans",
+           x = 1.1, y = .4,
+           hjust = 0) +
+  annotate("text", 
+           label="Preferences\ncloser to\nAstley's\nrival",
+           size = 3.5, family="Open Sans",
+           x = -1.2, y = .45,
+           hjust = .5) +
+  annotate("text", 
+           label="Preferences\ncloser to\nCongressman\nAstley",
+           size = 3.5, family="Open Sans",
+           x = .5, y = .45,
+           hjust = .5) +
+  labs(title = "Median Voter Theorem Suggests Congressman Astley Secures Re-election Against His Rival",
+       subtitle = "Assuming a unidimensional policy space and single-peaked preferences, Congressman Astley is closer to the median voter than his rival and wins the election.") +
+  geom_hline(yintercept = 0) +
+  geom_vline(xintercept = -4)
+  
+  
+
+
+```
+
+---
+background-image: url(https://media.giphy.com/media/Vuw9m5wXviFIQ/giphy.gif)
+background-position: 50% 50%
+background-size: 100%
+class: center, bottom, fullscale
+
+# Re-election Dance
+
+
+
+---
+
+# Caribbean Queen and Operation Urgent Fury
+
+.pull-left[
+
+Billy Ocean released "Caribbean Queen" in 1984.
+
+- Emphasized sharing the same dream
+- Hearts beating as one
+
+"Caribbean Queen" is about the poor execution of Operation Urgent Fury.
+
+- Coordination problems plagued its execution from the start.
+- Echoed JCS chairman David Jones' frustrations with military establishment.
+]
+
+.pull-right[
+
+![](http://wearethemighty.wpengine.netdna-cdn.com/wp-content/uploads/2016/05/GrenadaNewsCartoon.jpg)
+
+*This seriously happened, btw..*
+]
+
+Billy Ocean is advocating for what became the Goldwater-Nichols Act.
+
+- Wanted to take advantage of **economies of scale**, resolve **coordination problems** in U.S. military.
+
+---
+
+background-image: url(https://i.makeagif.com/media/9-05-2015/auHafh.gif)
+background-position: 50% 50%
+background-size: 100%
+class: center, bottom, fullscale
+
+# The military establishment was the tiger we wanted to tame all along.
+
+
+---
+
+# The Good Day Hypothesis
+
+We know the following about Ice Cube's day.
+
+1. The Lakers beat the Supersonics.
+2. No helicopter looked for a murder.
+3. Consumed Fatburger at 2 a.m.
+4. Goodyear blimp: "Ice Cube's a pimp."
+
+--
+
+This leads to two different hypotheses:
+
+- $H_0$: Ice Cube's day is statistically indistinguishable from a typical day.
+- $H_1$: Ice Cube is having a good day.
+
+These hypotheses are tested using archival data from Ice Cube's life to estimate an item response model of the "goodness" of Ice Cube's days.
+
+---
+
+```{r, eval = T, echo = F, fig.width=11, fig.height = 8, message=F, dev='svg', fig.cap = "SDFSFDSFS"}
+interval1 <- -qnorm((1-0.9)/2)  # 90% multiplier
+interval2 <- -qnorm((1-0.95)/2) # 95% multiplier
+
+tribble(
+  ~variable, ~est, ~se,
+  "Latent Estimate of\nIce Cube's Day", 1.6, .231
+) %>%
+  ggplot(.) + theme_steve_web() +
+  geom_hline(yintercept = .5, color = "red", lty=2) +
+  geom_linerange(aes(x = variable, ymin = est - se*interval1,
+                                ymax = est + se*interval1),
+                            lwd = 1, position = position_dodge(width = 1/2)) +
+  geom_pointrange(aes(x = variable, y = est, ymin = est - se*interval2,
+                                 ymax = est + se*interval2),
+                             lwd = 1/2, position = position_dodge(width = 1/2),
+                             fill = "WHITE") +
+  coord_flip() + xlab("") + ylab("Latent Estimate") +
+  labs(title = "Latent Estimates from Ice Cube's Archives Lend Support to the 'Good Day' Hypothesis",
+       subtitle = "Latent estimates are drawn from an item response model of indicators of the quality of Ice Cube's days. These include whether he had to use his A.K.",
+       caption = "Data: Ice Cube's Archives, obviously fictional. Red value of .5 indicate likelihood of 'good day.'")
+  
+
+
+```
+
+---
+
+background-image: url(https://media.giphy.com/media/cgh25bl5dgK3u/giphy.gif)
+background-position: 50% 50%
+background-size: 100%
+class: center, bottom, fullscale
+
+---
+
+class: center, middle
+
+# You Can Do Other Stuff in Xaringan Too
+## POSC 0000 -- It Would Be Cool If This Were an Actual Class Presentation
+### I might use it mostly for the ability to put GIFs in class presentations, but it's flexible enough to do almost anything.
+
+---
+
+Show some R code and execute it if you'd like.
+
+```{r}
+pi
+
+3+5
+
+rnorm(10)
+
+```
+
+
+---
+
+Here's a simple ultimatum game, a la Fearon (1995). Done via `DiagrammeR`.
+
+```{r, echo=F, eval=T}
+library(DiagrammeR)
+grViz(" 
+  digraph {
+    # Multiple level nodes
+    node [shape = square, color=CornflowerBlue]
+    A [label = 'A']; 
+    0 [label = '0', shape = none];
+    B [label = 'B'];
+    1 [label = '1', shape = none];
+    Accept [label = '1 - x, x', shape = none];
+    N;
+    Awins [shape = none, label = '1 - k, k'];
+    Bwins [shape = none, label = '-k, 1 - k']
+
+
+
+     # Connect nodes with edges and labels
+    A -> 0 [arrowhead= none]
+    A -> B
+    A -> 1 [arrowhead = none]
+    B -> Accept [headlabel = 'Accept', labeldistance = 5, labelangle=75] 
+    B -> N [label = '       Reject']
+    N -> Awins [headlabel = 'A wins (1 - p)', labeldistance=4.5 ,
+        labelangle=75]
+    N -> Bwins [label = 'B wins (p)']
+  }
+
+[1]: 'A' 
+[2]: '0'
+[3]: paste0('Model 3\\n Split 3') 
+[4]: paste0('Model 6\\n Split 4') 
+")
+
+```
+
+---
+
+# Conclusion
+
+Xaringan is a nifty Rstudio add-on/package for creating HTML presentations.
+
+- I think I'm still more inclined toward Beamer but Xaringan has tons of flexibility.
+- Have an interactive component to your presentation (e.g. `leaflet` or a Shiny app)? You probably want Xaringan.
+
+Plus, you can put GIFs into your presentation with Xaringan. That's nifty. Maybe students will like that.
+
+
+
+---
+
+background-image: url(https://i.imgur.com/IHeUeZ9.gif)
+background-position: 50% 50%
+background-size: 100%
+class: center, bottom, fullscale
+
+Questions? Hate mail? Stay out of my mentions @stevenvmiller
