@@ -14,6 +14,7 @@ fontawesome: yes
 email: guinness@consumer-care.net
 # github: svmiller
 # twitter: stevenvmiller
+#osf: "Enter 5 digit osf string here"
 phone: "+353 1 408 4800"
 web: guinness.com
 updated: no
