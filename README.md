@@ -5,6 +5,8 @@ I love R Markdown and effectively abandoned LaTeX for it. I have a suite of R Ma
  
 ## Related Reading
 
+- [An R Markdown Template for Memos](http://svmiller.com/blog/2019/06/r-markdown-memo-template/)
+- [Make Your Presentations Fun in Xaringan](http://svmiller.com/blog/2018/02/r-markdown-xaringan-theme/)
 - [Automatically Do (Just About) Everything in Your Syllabus with R Markdown](http://svmiller.com/blog/2016/07/r-markdown-syllabus/)
 - [Make Your Academic CV Look Pretty in R Markdown](http://svmiller.com/blog/2016/03/svm-r-markdown-cv/)
 - [An R Markdown Template for Academic Manuscripts](http://svmiller.com/blog/2016/02/svm-r-markdown-manuscript/)
