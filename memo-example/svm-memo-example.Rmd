@@ -1,0 +1,84 @@
+---
+output: 
+  pdf_document:
+    citation_package: natbib
+    keep_tex: false
+    latex_engine: pdflatex
+    template: ../svm-latex-memo.tex
+fontfamily: mathpazo
+fontsize: 11pt
+geometry: margin=1in
+header-includes:
+   - \linespread{1.05}
+
+from: Taylor Swift
+to: Jake Gyllenhaal (reportedly)
+subject: We Are Never Ever Getting Back Together
+date: "`r format(as.Date('2012-08-13'), '%d %B, %Y')`"
+memorandum: true
+graphics: true
+width: .3
+logoposition: right
+logo: taylor-swift-logo.png
+---
+  
+I remember when we broke up the first time  
+Saying, "This is it, I've had enough," 'cause like  
+We hadn't seen each other in a month  
+When you said you needed space. (What?)  
+Then you come around again and say  
+"Baby, I miss you and I swear I'm gonna change, trust me."  
+Remember how that lasted for a day?  
+I say, "I hate you," we break up, you call me, "I love you."  
+
+Ooh, we called it off again last night  
+But ooh, this time I'm telling you, I'm telling you  
+
+We are never ever ever getting back together,  
+We are never ever ever getting back together,  
+You go talk to your friends, talk to my friends, talk to me  
+But we are never ever ever ever getting back together  
+
+Like, ever...  
+
+I'm really gonna miss you picking fights  
+And me falling for it screaming that I'm right  
+And you would hide away and find your peace of mind  
+With some indie record that's much cooler than mine  
+
+Ooh, you called me up again tonight  
+But ooh, this time I'm telling you, I'm telling you  
+
+We are never, ever, ever getting back together  
+We are never, ever, ever getting back together  
+You go talk to your friends, talk to my friends, talk to me (talk to me)  
+But we are never ever ever ever getting back together  
+
+Ooh, yeah, ooh yeah, ooh yeah  
+Oh oh oh  
+
+I used to think that we were forever ever  
+And I used to say, "Never say never..."  
+Uggg... so he calls me up and he's like, "I still love you,"  
+And I'm like... "I just... I mean this is exhausting, you know, like,  
+We are never getting back together. Like, ever"  
+
+No!  
+
+We are never ever ever getting back together  
+We are never ever ever getting back together  
+You go talk to your friends, talk to my friends, talk to me  
+But we are never ever ever ever getting back together  
+
+We, ooh, getting back together, ohhh,  
+We, ooh, getting back together  
+
+You go talk to your friends, talk to my friends, talk to me (talk to me)  
+But we are never ever ever ever getting back together   
+
+
+---
+
+Songwriters: Taylor Swift / Max Martin / Johan Shellback  
+We Are Never Ever Getting Back Together lyrics © Kobalt Music Publishing Ltd., Sony/ATV Music Publishing LLC  
+Send hate mail to svmille@clemson.edu

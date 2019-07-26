@@ -1,0 +1,48 @@
+---
+title: "Untitled (Note: This is a still a work in progress and also MS Word suuuuuucks."
+author: "Steven V. Miller"
+output:
+  word_document:
+    reference_docx: ../svm-rmarkdown-word.docx
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Section
+
+## Subsection
+
+### Third subsection
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo consequat mi in fermentum. Phasellus id nisi at nibh sollicitudin volutpat non et massa. Nam nec sapien porttitor, sollicitudin erat vitae, auctor mauris. Nam nisl enim, sagittis vitae semper vitae, suscipit id turpis. Aliquam vel lacinia libero, sit amet dapibus nunc. Nullam vitae bibendum orci. Vestibulum hendrerit maximus volutpat. Nulla a placerat sapien. Integer ullamcorper dapibus magna, eget scelerisque orci consequat quis. Fusce suscipit mi tortor, ultricies faucibus arcu finibus at. Quisque blandit velit in hendrerit pulvinar.
+
+Integer vitae consequat mi, sit amet pulvinar massa. Quisque at dui lectus. Mauris malesuada mattis arcu nec ultricies. Integer quis condimentum nulla. Nullam lacinia vel diam condimentum hendrerit. Quisque sed rhoncus dolor. Vivamus at sem vitae nisi imperdiet hendrerit a sed felis. Quisque sollicitudin ex nec enim malesuada iaculis. Nam in interdum sapien. Fusce pellentesque volutpat metus faucibus vulputate. In turpis odio, ornare tempus facilisis vel, malesuada sed est.
+
+Vivamus bibendum velit in magna blandit fringilla. Nullam fermentum euismod nisi, eu consectetur odio fermentum at. Suspendisse egestas sed quam ac scelerisque. Nullam venenatis ipsum semper tortor sagittis tempor. Integer nec leo at est placerat fringilla. Integer mollis vitae enim in condimentum. Pellentesque pulvinar volutpat feugiat. Donec enim tortor, facilisis sit amet vulputate eu, auctor efficitur diam.
+
+Aenean eleifend sem at massa placerat molestie. Phasellus eget sapien sapien. Ut bibendum mauris sit amet placerat semper. Curabitur sed dui in libero tempus sollicitudin in sit amet odio. In ullamcorper lorem vitae sollicitudin cursus. Nulla id blandit sapien. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam mi orci, maximus a mattis aliquam, finibus eu dolor. Suspendisse ullamcorper dui a orci bibendum, in mollis dolor ullamcorper.
+
+Aenean in purus sapien. Suspendisse malesuada orci justo, eget sollicitudin neque rhoncus nec. Suspendisse nibh metus, volutpat vel tempor in, vestibulum vitae erat. Ut velit nisl, venenatis vitae condimentum molestie, facilisis eget odio. Nulla ornare vehicula risus, vitae commodo metus aliquet vitae. Nulla nunc metus, rutrum sit amet mauris non, auctor tristique dolor. Phasellus ut nibh at risus scelerisque maximus. Maecenas vitae enim et ligula tempus malesuada. Suspendisse auctor sed ligula vitae semper. Phasellus eu turpis volutpat, luctus leo eget, consectetur lacus. In condimentum erat eu egestas congue. Aenean ut mi ut eros condimentum viverra a quis sapien. Morbi in diam mauris. Sed eu eleifend eros, nec euismod lectus.
+
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

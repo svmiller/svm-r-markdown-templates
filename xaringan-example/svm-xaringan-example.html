@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+  <head>
+    <title>Steve’s Xaringan Presentation</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Steven V. Miller      Department of Political Science" />
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <script src="libs/htmlwidgets/htmlwidgets.js"></script>
+    <script src="libs/viz/viz.js"></script>
+    <link href="libs/DiagrammeR-styles/styles.css" rel="stylesheet" />
+    <script src="libs/grViz-binding/grViz.js"></script>
+    <link rel="stylesheet" href="../svm-xaringan-style.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Steve’s Xaringan Presentation
+## POSC 0000 – It Would Be Cool If This Were an Actual Class Presentation
+### Steven V. Miller<br /> <br /> <br /> Department of Political Science
+### Department of Political Science
+
+---
+
+
+
+
+
+
+# Install Xaringan First
+
+Install the **xaringan** package from [Github](https://github.com/yihui/xaringan):
+
+
+```r
+devtools::install_github("yihui/xaringan")
+```
+
+
+You are recommended to use the [RStudio IDE](https://www.rstudio.com/products/rstudio/), but you do not have to.
+
+- Create a new R Markdown document from the menu `File -&gt; New File -&gt; R Markdown -&gt; From Template -&gt; Ninja Presentation`;&lt;sup&gt;1&lt;/sup&gt;
+- Click the `Knit` button to compile it.
+
+---
+
+# remark.js Maximizes the Presentation Value
+
+Press `h` or `?` to see  controls you have in remark.js.
+
+Hit `Esc` to exit that screen.
+
+
+
+---
+
+class: center, middle
+
+# You can do this to your slides if you want
+## Add `class: center, middle` to the start of your slide.
+### Perhaps you want the appearance of a secondary title slide, which is what this will do.
+
+For example, check this out...
+
+---
+
+class: center, middle
+
+# Pop Music and Political Science
+## POSC 0000 -- It Would Be Cool If This Were an Actual Class Presentation
+### I am not funny and you will be forgiven for thinking of me as impossibly uncool.
+
+
+
+---
+
+# Sheena Easton and Total Conflict
+
+Sheena Easton describes the following scenario for her baby:
+
+- Takes the morning train
+- Works from nine 'til five
+- Takes another train home again
+- Finds Sheena Easton waiting for him
+
+--
+
+Sheena Easton and her baby are playing a **zero-sum (total conflict)** game.
+
+- Akin to Holmes-Moriarty game (see: von Neumann and Morgenstern), or "matching pennies."
+- Useful for modeling strategic counterterrorism dilemmas between a government and terrorist group.
+
+
+---
+
+# A Total Conflict Between Sheena Easton and Her Baby
+
+|                         | Sheena Easton Stays Home       | Sheena Easton Goes to Baby's Work |
+|-------------------------|---------------------|------------------|
+| **Baby Home Again**          |  -100, **100**         |  **100**, 0       |
+| **Baby Stays at Work**             |   **50**, 0        |  -100, **100**        |
+
+--
+
+&lt;br /&gt;
+
+Notice we have no pure strategies, and no Nash equilibrium.
+
+- Sheena Easton wants to proverbially "match pennies."
+- Her baby has diametrically opposed preferences, fearing for his safety.
+
+Solution: mixed strategy.
+
+---
+background-image: url(https://media.giphy.com/media/dqZSIfquVhSg0/giphy.gif)
+background-position: 50% 50%
+background-size: 100%
+class: center, bottom, fullscale
+
+# Run...
+
+---
+
+# Congressman Astley's Re-election Platform
+
+Assume Congressman Astley presides over a competitive district in which he seeks reappointment. He promises he's:
+
+- Never gonna give you up.
+- Never gonna let you down.
+- Never gonna run around and desert you.
+- Never gonna make you cry.
+- Never gonna say goodbye.
+- Never gonna tell a lie and hurt you.
+
+Are these promises (if credible) sufficient to secure re-election?
+
+---
+
+![SDFSFDSFS](svm-xaringan-example_files/figure-html/unnamed-chunk-2-1.svg)
+
+---
+background-image: url(https://media.giphy.com/media/Vuw9m5wXviFIQ/giphy.gif)
+background-position: 50% 50%
+background-size: 100%
+class: center, bottom, fullscale
+
+# Re-election Dance
+
+
+
+---
+
+# Caribbean Queen and Operation Urgent Fury
+
+.pull-left[
+
+Billy Ocean released "Caribbean Queen" in 1984.
+
+- Emphasized sharing the same dream
+- Hearts beating as one
+
+"Caribbean Queen" is about the poor execution of Operation Urgent Fury.
+
+- Coordination problems plagued its execution from the start.
+- Echoed JCS chairman David Jones' frustrations with military establishment.
+]
+
+.pull-right[
+
+![](http://wearethemighty.wpengine.netdna-cdn.com/wp-content/uploads/2016/05/GrenadaNewsCartoon.jpg)
+
+*This seriously happened, btw..*
+]
+
+Billy Ocean is advocating for what became the Goldwater-Nichols Act.
+
+- Wanted to take advantage of **economies of scale**, resolve **coordination problems** in U.S. military.
+
+---
+
+background-image: url(https://i.makeagif.com/media/9-05-2015/auHafh.gif)
+background-position: 50% 50%
+background-size: 100%
+class: center, bottom, fullscale
+
+# The military establishment was the tiger we wanted to tame all along.
+
+
+---
+
+# The Good Day Hypothesis
+
+We know the following about Ice Cube's day.
+
+1. The Lakers beat the Supersonics.
+2. No helicopter looked for a murder.
+3. Consumed Fatburger at 2 a.m.
+4. Goodyear blimp: "Ice Cube's a pimp."
+
+--
+
+This leads to two different hypotheses:
+
+- `\(H_0\)`: Ice Cube's day is statistically indistinguishable from a typical day.
+- `\(H_1\)`: Ice Cube is having a good day.
+
+These hypotheses are tested using archival data from Ice Cube's life to estimate an item response model of the "goodness" of Ice Cube's days.
+
+---
+
+![SDFSFDSFS](svm-xaringan-example_files/figure-html/unnamed-chunk-3-1.svg)
+
+---
+
+background-image: url(https://media.giphy.com/media/cgh25bl5dgK3u/giphy.gif)
+background-position: 50% 50%
+background-size: 100%
+class: center, bottom, fullscale
+
+---
+
+class: center, middle
+
+# You Can Do Other Stuff in Xaringan Too
+## POSC 0000 -- It Would Be Cool If This Were an Actual Class Presentation
+### I might use it mostly for the ability to put GIFs in class presentations, but it's flexible enough to do almost anything.
+
+---
+
+Show some R code and execute it if you'd like.
+
+
+```r
+pi
+```
+
+```
+## [1] 3.141593
+```
+
+```r
+3+5
+```
+
+```
+## [1] 8
+```
+
+```r
+rnorm(10)
+```
+
+```
+##  [1] -0.30003812 -1.61892827  1.93956130  0.56298414 -0.62420887
+##  [6] -0.18002756  0.09307368  1.82511402 -1.55413013 -0.86518401
+```
+
+
+---
+
+Here's a simple ultimatum game, a la Fearon (1995). Done via `DiagrammeR`.
+
+<div id="htmlwidget-a47a1d9baa5efab0103b" style="width:504px;height:504px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-a47a1d9baa5efab0103b">{"x":{"diagram":" \n  digraph {\n    # Multiple level nodes\n    node [shape = square, color=CornflowerBlue]\n    A [label = \"A\"]; \n    0 [label = \"0\", shape = none];\n    B [label = \"B\"];\n    1 [label = \"1\", shape = none];\n    Accept [label = \"1 - x, x\", shape = none];\n    N;\n    Awins [shape = none, label = \"1 - k, k\"];\n    Bwins [shape = none, label = \"-k, 1 - k\"]\n\n\n\n     # Connect nodes with edges and labels\n    A -> 0 [arrowhead= none]\n    A -> B\n    A -> 1 [arrowhead = none]\n    B -> Accept [headlabel = \"Accept\", labeldistance = 5, labelangle=75] \n    B -> N [label = \"       Reject\"]\n    N -> Awins [headlabel = \"A wins (1 - p)\", labeldistance=4.5 ,\n        labelangle=75]\n    N -> Bwins [label = \"B wins (p)\"]\n  }\n\n[1]: \"A\" \n[2]: \"0\"\n[3]: paste0(\"Model 3\\n Split 3\") \n[4]: paste0(\"Model 6\\n Split 4\") \n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+
+---
+
+# Conclusion
+
+Xaringan is a nifty Rstudio add-on/package for creating HTML presentations.
+
+- I think I'm still more inclined toward Beamer but Xaringan has tons of flexibility.
+- Have an interactive component to your presentation (e.g. `leaflet` or a Shiny app)? You probably want Xaringan.
+
+Plus, you can put GIFs into your presentation with Xaringan. That's nifty. Maybe students will like that.
+
+
+
+---
+
+background-image: url(https://i.imgur.com/IHeUeZ9.gif)
+background-position: 50% 50%
+background-size: 100%
+class: center, bottom, fullscale
+
+Questions? Hate mail? Stay out of my mentions @stevenvmiller
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
