@@ -1,0 +1,30 @@
+# ignore temp files w/ trailing ~. I think I stopped Gedit from doing this.
+*~
+
+# ignore hidden files
+.*
+
+# ignore files with the rolling extensions
+*.DS_Store
+*.Rhistory
+*.Rapp.history
+*.Rproj.user
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.toc
+*.spl
+*.synctex.gz
+*.bib.bak
+
+# ignore my old files and other irrelevant directories
+_cache
+_dross
+
+# don't ignore the .gitignore file
+!.gitignore
+.Rproj.user
+
+# I hate writing .gitignore files.
