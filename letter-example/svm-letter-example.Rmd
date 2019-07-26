@@ -1,0 +1,54 @@
+---
+output:
+  pdf_document:
+    citation_package: natbib
+    fig_caption: yes
+    keep_tex: no
+    latex_engine: pdflatex
+header-includes:
+   - \linespread{1.05}
+   - \newcommand{\blankline}{\quad\pagebreak[2]}
+   - \usepackage{eso-pic}
+   - \usepackage{graphicx}
+   - \newcommand\BackgroundPic{\put(0,0){\parbox[b][\paperheight]{\paperwidth}{\vfill\centering \includegraphics[width=\paperwidth,height=\paperheight, keepaspectratio]{clemson-letterhead.pdf} \vfill }}}
+geometry: top=1.5in, left=1.75in, bottom=1in, right=1in
+# fontfamily: mathpazo
+fontfamilyoptions: sc, osf
+fontsize: 10pt
+urlcolor: blue
+---
+
+\AddToShipoutPicture*{\BackgroundPic}
+\pagenumbering{gobble}
+
+`r format(Sys.time(), '%B %d, %Y')`
+
+\blankline
+
+Dear Professor So-and-so:
+
+\blankline
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque non pretium turpis. Etiam nibh nibh, pharetra vel semper quis, rhoncus non sapien. Nunc gravida, elit nec malesuada elementum, purus orci consequat lacus, et gravida felis felis eu lacus. Aenean ac dapibus purus, eget consequat eros. Sed eros odio, rutrum vitae posuere id, facilisis eu elit. Duis sed lorem et tortor consectetur mattis. In nisi arcu, aliquet a purus in, sodales pulvinar sapien. Nulla auctor, orci id sodales consequat, augue odio egestas libero, tincidunt fringilla eros neque at orci. Duis accumsan tellus sapien, id cursus odio egestas in. Integer in nibh suscipit mauris auctor gravida.
+
+Aenean dapibus placerat laoreet. Maecenas id arcu semper, feugiat urna eget, placerat ipsum. Maecenas porta sit amet ante vel finibus. Quisque porttitor urna gravida commodo ullamcorper. Nullam dapibus sodales lacus vitae facilisis. Praesent nec velit eget quam congue aliquet vitae sed urna. Duis venenatis ornare sagittis. Nullam dolor odio, porttitor pulvinar aliquet in, rutrum id dolor. Nullam vestibulum ligula diam, at fringilla tellus aliquet eu. In sit amet magna ac ante efficitur laoreet ut eget lectus. Aenean mauris quam, accumsan fermentum massa ac, blandit hendrerit arcu. Proin dignissim sapien quis maximus faucibus. Aenean lobortis tellus nec nulla fringilla, vitae sagittis felis pretium. Pellentesque nec luctus urna.
+
+Cras velit neque, pulvinar vitae eros eget, commodo dignissim mauris. Mauris ac facilisis tortor. Mauris imperdiet diam quis justo posuere convallis non et felis. Donec vel justo orci. In et volutpat est. Integer lacinia faucibus tellus, non vehicula enim faucibus eget. Pellentesque sagittis tortor sed dignissim congue. Cras id dui eu risus malesuada congue a ac augue. Vivamus dignissim lacinia neque, eu malesuada metus cursus nec.
+
+Quisque molestie venenatis libero quis sollicitudin. Morbi luctus id tortor non dapibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus sagittis est tortor, in facilisis ante scelerisque sed. Sed laoreet sapien eget dui congue placerat. In gravida magna tortor, ac aliquet urna mattis in. Suspendisse potenti.
+
+Cras elit dui, sagittis ac magna et, ullamcorper elementum justo. Proin nibh orci, condimentum at magna a, euismod pretium sem. Sed consequat posuere nisi, porttitor feugiat lectus vestibulum mattis. Duis sagittis elit nisi. In sagittis diam in metus pellentesque gravida. Praesent malesuada magna nec lacus facilisis, interdum eleifend sem porta. Mauris commodo in nibh quis mattis. Vestibulum erat odio, convallis non dui vitae, iaculis tempus arcu. Phasellus nec rhoncus tellus. Cras vel dolor sit amet sapien mollis feugiat sit amet vestibulum massa. Aenean eget molestie turpis. Phasellus convallis porta est, vitae condimentum urna tincidunt eget. 
+
+Best regards,
+
+```{r echo=FALSE, out.width='30%'}
+knitr::include_graphics('john-hancock-signature.png')
+```
+
+
+
+<!-- Steven V. Miller   -->
+<!-- Associate Professor   -->
+<!-- Department of Political Science   -->
+<!-- E-mail: svmille@clemson.edu   -->
+<!-- URL: http://svmiller.com -->
