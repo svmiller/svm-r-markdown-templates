@@ -1,4 +1,5 @@
 \documentclass[10pt,ignorenonframetext,,aspectratio=149]{beamer}
+\usefonttheme{serif} % use mainfont rather than sansfont for slide text
 \setbeamertemplate{caption}[numbered]
 \setbeamertemplate{caption label separator}{: }
 \setbeamercolor{caption name}{fg=normal text.fg}
@@ -17,6 +18,7 @@
   \fi
   \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
   \newcommand{\euro}{€}
+    \setmainfont[]{Open Sans}
 \fi
 % use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
@@ -25,46 +27,12 @@
 \usepackage{microtype}
 \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
 }{}
-\usepackage{color}
-\usepackage{fancyvrb}
-\newcommand{\VerbBar}{|}
-\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
-\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
-% Add ',fontsize=\small' for more characters per line
-\usepackage{framed}
-\definecolor{shadecolor}{RGB}{248,248,248}
-\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
-\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
-\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
-\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\BuiltInTok}[1]{#1}
-\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
-\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
-\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
-\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
-\newcommand{\ExtensionTok}[1]{#1}
-\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\ImportTok}[1]{#1}
-\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
-\newcommand{\NormalTok}[1]{#1}
-\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
-\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
-\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
-\newcommand{\RegionMarkerTok}[1]{#1}
-\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{longtable,booktabs}
+\usepackage{caption}
+% These lines are needed to make table captions work with longtable:
+\makeatletter
+\def\fnum@table{\tablename~\thetable}
+\makeatother
 \usepackage{graphicx,grffile}
 \makeatletter
 \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
@@ -231,8 +199,8 @@
 % I could customize/generalize this more but the truth is it works for my circumstances.
 
 \ifxetex
-\setbeamerfont{title}{family=\fontspec{serif}}
-\setbeamerfont{frametitle}{family=\fontspec{serif}}
+\setbeamerfont{title}{family=\fontspec{Titillium Web}}
+\setbeamerfont{frametitle}{family=\fontspec{Titillium Web}}
 \usepackage[font=small,skip=0pt]{caption}
  \else
  \fi
@@ -262,6 +230,24 @@ Sheena Easton describes the following scenario for her baby:
 \item
   Finds Sheena Easton waiting for him
 \end{enumerate}
+
+\end{frame}
+
+\begin{frame}{A Total Conflict Game Between Sheena Easton and Her Baby}
+\protect\hypertarget{a-total-conflict-game-between-sheena-easton-and-her-baby}{}
+
+\begin{longtable}[]{@{}lll@{}}
+\toprule
+& Sheena Easton Stays Home & Sheena Easton Goes to Baby's
+Work\tabularnewline
+\midrule
+\endhead
+\textbf{Baby Home Again} & -100, \textbf{100} & \textbf{100},
+0\tabularnewline
+\textbf{Baby Stays at Work} & \textbf{50}, 0 & -100,
+\textbf{100}\tabularnewline
+\bottomrule
+\end{longtable}
 
 Sheena Easton and her baby are playing a \textbf{zero-sum (total
 conflict) game}.
@@ -296,6 +282,20 @@ Rick Astley's campaign promises:
 \item
   Never gonna tell a lie and hurt you.
 \end{itemize}
+
+Are these promises (if credible) sufficient to secure re-election?
+
+\end{frame}
+
+\begin{frame}{}
+\protect\hypertarget{section}{}
+
+\includegraphics{figs/rick-astley-never-gonna-give-you-up-median-voter-theorem.pdf}
+
+\end{frame}
+
+\begin{frame}{Rick Astley and Median Voter Theorem}
+\protect\hypertarget{rick-astley-and-median-voter-theorem}{}
 
 Whereas these pledges conform to the preferences of the \textbf{median
 voter}, we expect Congressman Astley to secure re-election.
@@ -353,6 +353,11 @@ We know the following about Ice Cube's day.
   Goodyear blimp: ``Ice Cube's a pimp.''
 \end{enumerate}
 
+\end{frame}
+
+\begin{frame}{The Good Day Hypothesis}
+\protect\hypertarget{the-good-day-hypothesis-1}{}
+
 This leads to two different hypotheses:
 
 \begin{itemize}
@@ -368,61 +373,10 @@ These hypotheses are tested using archival data of Ice Cube's life.
 
 \end{frame}
 
-\hypertarget{example-r-code}{%
-\section{Example R code}\label{example-r-code}}
+\begin{frame}{}
+\protect\hypertarget{section-1}{}
 
-\begin{frame}[fragile]{Example R stuff}
-\protect\hypertarget{example-r-stuff}{}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\KeywordTok{summary}\NormalTok{(cars)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-##      speed           dist       
-##  Min.   : 4.0   Min.   :  2.00  
-##  1st Qu.:12.0   1st Qu.: 26.00  
-##  Median :15.0   Median : 36.00  
-##  Mean   :15.4   Mean   : 42.98  
-##  3rd Qu.:19.0   3rd Qu.: 56.00  
-##  Max.   :25.0   Max.   :120.00
-\end{verbatim}
-
-\end{frame}
-
-\begin{frame}[fragile]{Slide with Plot}
-\protect\hypertarget{slide-with-plot}{}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\KeywordTok{plot}\NormalTok{(pressure)}
-\end{Highlighting}
-\end{Shaded}
-
-\includegraphics{figs/pressure.pdf}
-
-\end{frame}
-
-\begin{frame}[fragile]{ggplot code}
-\protect\hypertarget{ggplot-code}{}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{df <-}\StringTok{ }\KeywordTok{data.frame}\NormalTok{(}\DataTypeTok{x =} \KeywordTok{rnorm}\NormalTok{(}\DecValTok{1000}\NormalTok{))}
-\NormalTok{x <-}\StringTok{ }\NormalTok{df}\OperatorTok{$}\NormalTok{x}
-\NormalTok{base <-}\StringTok{ }\KeywordTok{ggplot}\NormalTok{(df, }\KeywordTok{aes}\NormalTok{(x)) }\OperatorTok{+}\StringTok{ }\KeywordTok{geom_density}\NormalTok{()  }\OperatorTok{+}\StringTok{ }\KeywordTok{scale_x_continuous}\NormalTok{(}\DataTypeTok{limits =} \KeywordTok{c}\NormalTok{(}\OperatorTok{-}\DecValTok{5}\NormalTok{, }\DecValTok{5}\NormalTok{))}
-\NormalTok{base }\OperatorTok{+}\StringTok{ }\KeywordTok{stat_function}\NormalTok{(}\DataTypeTok{fun =}\NormalTok{ dnorm, }\DataTypeTok{colour =} \StringTok{"red"}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
-
-\end{frame}
-
-\begin{frame}{Another Plot}
-\protect\hypertarget{another-plot}{}
-
-\includegraphics{figs/plotit.pdf}
+\includegraphics{figs/good-day-hypothesis.pdf}
 
 \end{frame}
 

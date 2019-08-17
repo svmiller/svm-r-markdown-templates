@@ -2,3 +2,12 @@ base
 RevoUtilsMath
 RevoUtils
 ggplot2
+stevemisc
+tidyverse
+tibble
+tidyr
+readr
+purrr
+dplyr
+stringr
+forcats
