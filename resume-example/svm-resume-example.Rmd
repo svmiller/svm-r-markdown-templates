@@ -7,7 +7,7 @@ output:
     latex_engine: xelatex
     keep_tex: true
     dev: cairo_pdf
-    template: ~/Dropbox/miscelanea/svm-r-markdown-templates/svm-latex-resume.tex
+    template: ../svm-latex-resume.tex
 fontawesome: TRUE
 # How can we get a hold of you?
 email: FanServices@wwe.com
@@ -25,6 +25,7 @@ urlcolor: blue
 fontsize: 11pt
 
 includephoto: TRUE
+myphoto: rick-martel-crop.jpg
 # shift: "7in,-.25in" # this is default
 photobigness: 1.75cm
 # photozoom: ".2\textwidth" # this is default
