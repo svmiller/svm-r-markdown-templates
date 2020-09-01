@@ -353,7 +353,6 @@ $if(fontawesome)$\usepackage{fontawesome}$endif$
 % Mess with sections
 \usepackage{titlesec}
 \usepackage{sectsty}
-\usepackage{sectsty}
 % \sectionfont{\rmfamily\mdseries\large\bf\underline}
 \sectionfont{\normalfont\sffamily\large\bfseries\sectionrule{0pt}{0pt}{-4pt}{1pt}}
 \subsectionfont{\rmfamily\mdseries\normalsize\scshape}
@@ -370,13 +369,56 @@ $if(includephoto)$
 \usetikzlibrary{calc} 
 $endif$
 
+
+% Make AP style (kinda) dates for the updated/today field
+
+\usepackage{datetime}
+\newdateformat{apstylekinda}{%
+  \shortmonthname[\THEMONTH]. \THEDAY, \THEYEAR}
+
+% Fancyhdr, as I tend to do with these personal documents.
+\usepackage{fancyhdr,lastpage}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0.0pt}
+\renewcommand{\footrulewidth}{0.0pt}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{
+\cfoot{\scriptsize  $author-meta$ - $title$ - \emph{Updated:} \apstylekinda\today }}
+\rfoot{\scriptsize \thepage/{\hypersetup{linkcolor=black}\pageref{LastPage}}}
+
+
+
+% Always load hyperref last.
+\usepackage{hyperref}
+$if(colorlinks)$
+\PassOptionsToPackage{usenames,dvipsnames}{color} % color is loaded by hyperref
+$endif$
+
+\hypersetup{unicode=true,
+$if(title-meta)$
+            pdftitle={$if(author-meta)$$author-meta$ $endif$ (R\'{e}sum\'{e})},
+$endif$
+$if(author-meta)$
+            pdfauthor={$author-meta$},
+$endif$
+$if(keywords)$
+            pdfkeywords={$for(keywords)$$keywords$$sep$; $endfor$},
+$endif$
+            colorlinks=true,
+            linkcolor=$if(linkcolor)$$linkcolor$$else$Maroon$endif$,
+            citecolor=$if(citecolor)$$citecolor$$else$Blue$endif$,
+            urlcolor=$if(urlcolor)$$urlcolor$$else$Blue$endif$,
+            breaklinks=true, bookmarks=true}
+
 \begin{document}
 % shift=(current page.north east)
 %\begin{wrapfigure}{r}{\textwidth}
 
 $if(includephoto)$
 \begin{tikzpicture}[remember picture,overlay, shift={($if(shift)$$shift$$else$7in,-0.25in$endif$)}]
-    \clip (0,0) circle ($if(photobigness)$$photobigness$$else$1.5cm$endif$) node {\includegraphics[width=$if(photozoom)$$photozoom$$else$.2\textwidth$endif$]{rick-martel-crop}};
+    \clip (0,0) circle ($if(photobigness)$$photobigness$$else$1.5cm$endif$) node {\includegraphics[width=$if(photozoom)$$photozoom$$else$.2\textwidth$endif$]{$myphoto$}};
 \end{tikzpicture}
 
 $endif$ % includephoto

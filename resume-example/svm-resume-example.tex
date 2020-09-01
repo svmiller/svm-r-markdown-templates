@@ -88,7 +88,6 @@
 % Mess with sections
 \usepackage{titlesec}
 \usepackage{sectsty}
-\usepackage{sectsty}
 % \sectionfont{\rmfamily\mdseries\large\bf\underline}
 \sectionfont{\normalfont\sffamily\large\bfseries\sectionrule{0pt}{0pt}{-4pt}{1pt}}
 \subsectionfont{\rmfamily\mdseries\normalsize\scshape}
@@ -102,6 +101,40 @@
 \usepackage{tikz}
 \usepackage{tikzpagenodes}
 \usetikzlibrary{calc} 
+
+
+% Make AP style (kinda) dates for the updated/today field
+
+\usepackage{datetime}
+\newdateformat{apstylekinda}{%
+  \shortmonthname[\THEMONTH]. \THEDAY, \THEYEAR}
+
+% Fancyhdr, as I tend to do with these personal documents.
+\usepackage{fancyhdr,lastpage}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0.0pt}
+\renewcommand{\footrulewidth}{0.0pt}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{
+\cfoot{\scriptsize  Rick Martel - Résumé - \emph{Updated:} \apstylekinda\today }}
+\rfoot{\scriptsize \thepage/{\hypersetup{linkcolor=black}\pageref{LastPage}}}
+
+
+
+% Always load hyperref last.
+\usepackage{hyperref}
+\PassOptionsToPackage{usenames,dvipsnames}{color} % color is loaded by hyperref
+
+\hypersetup{unicode=true,
+            pdftitle={Rick Martel  (R\'{e}sum\'{e})},
+            pdfauthor={Rick Martel},
+            colorlinks=true,
+            linkcolor=Maroon,
+            citecolor=Blue,
+            urlcolor=blue,
+            breaklinks=true, bookmarks=true}
 
 \begin{document}
 % shift=(current page.north east)
