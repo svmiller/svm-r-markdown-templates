@@ -1,0 +1,138 @@
+---
+title: "Résumé"
+author: "Rick Martel"
+date: "8/31/2020"
+output: 
+  pdf_document:
+    latex_engine: xelatex
+    keep_tex: true
+    dev: cairo_pdf
+    template: ~/Dropbox/miscelanea/svm-r-markdown-templates/svm-latex-resume.tex
+fontawesome: TRUE
+# How can we get a hold of you?
+email: FanServices@wwe.com
+phone: 833-225-5993
+location: "Cocoa Beach, FL (or Montréal, QC)"
+github: svmiller
+web: wwe.com/superstars/rick-martel
+twitter: "@rickmartelWWE"
+linkedin: "steven-miller-05b6851b3"
+geometry: "top=.5in, left =.5in, right=.5in, bottom=.75in"
+mainfont: cochineal
+sansfont: Fira Sans
+# monofont: Fira Code # I want to use this, but seems to choke on @
+urlcolor: blue
+fontsize: 11pt
+
+includephoto: TRUE
+# shift: "7in,-.25in" # this is default
+photobigness: 1.75cm
+# photozoom: ".2\textwidth" # this is default
+---
+
+
+<!-- Read more about Pandoc's [fenced_divs](https://pandoc.org/MANUAL.html#extension-fenced_divs) syntax -->
+
+:::::: {.columns}
+::: {.column width="60%" data-latex="{0.60\textwidth}"}
+
+# Professional Experience
+
+## World Championship Wrestling
+
+- Successfully feuded with Booker T, elevating his singles career.
+- Defenestrated on national television by Perry Saturn. It was technically a glass door, but I love the term "defenestration" and I don't get to use it much so I'm rolling with that.
+- Career effectively ended at Superbrawl VIII (:()
+
+## World Wrestling Federation
+
+- Runner-up in 1993 Intercontinental Championship Battle Royal (to Razor Ramon).
+- Wrestled Shawn Michaels to a countout draw in front of 80,000 fans in Wembley Stadium at Summerslam 1992.
+- Carried Tito Santana like dead weight to tag team prominence, before [tiring of him at Wrestlemania V](https://www.youtube.com/watch?v=VKnWAxg4R68).
+- Had two amazing entrance themes where somehow the least amazing of the two is [the one done by Robbie Dupree](https://www.youtube.com/watch?v=1bNr3144GDI).
+- Successfully cultivated "The Model" persona, relocating to Cocoa Beach for a gimmick that was years ahead of its time.
+- Launched successful line of cologne, *Arrogance*, and advertised it in [some amazing vignettes](https://www.youtube.com/watch?v=zm9AbH7CnBc).
+- [Temporarily blinded Jake "The Snake" Roberts](https://www.youtube.com/watch?v=cs7sxJboGWA), incapicating him for the better part of 1990.
+- Successfully teamed with Tony Garea and briefly with Tom Zenk before Tom Zenk got apparently got weird about pay disparities.
+
+## American Wrestling Association
+
+- [Beat Jumbo goddamn Tsuruta for AWA World Heavyweight Championship](https://www.youtube.com/watch?v=c3O_jGZd6EI). 
+- I'm going to make that another entry because seriously how cool is Jumbo as a proverbial notch on the belt? Jumbo Tsuruta was *the* Japanese pro-wrestler of the 1980s.
+- Wrestled several matches with then-NWA World Champion Ric Flair.
+
+## Other Territories
+
+- Emerged as top talent in the Pacific Northwest territory for the NWA.
+- Successfully teamed with Roddy Piper, winning a total of four tag team championships.
+- Feature attraction in multiple territories in Canada (e.g. Stampede Wrestling), Puerto Rico (World Wrestling Council), and the United States (e.g. Georgia Championship Wrestling)
+
+
+
+:::
+::: {.column width="2%" data-latex="{0.02\textwidth}"}
+\ 
+<!-- an empty div with an empty character to serve as a column sep -->
+:::
+:::::: {.column width="38%" data-latex="{0.38\textwidth}"}
+
+# Education
+
+To continue the theme of this résumé, pro wrestlers of the time were typically not the kind that had university degrees, but you can insert your own here.
+
+## Postgraduate Program
+
+Ph.D. in Boston Crab Studies
+ 
+## Undergraduate Program
+
+B.A. in something or other.
+
+# Technical Skills (or Accomplishments)
+
+Put your technical skills here, or, if you're Rick Martel, list your pro-wrestling accolades.
+
+## Championships
+
+- AWA World Heavyweight Championship (1984)
+- WCW World Television Championship (1998)
+- NWA Pacific Northwest Heavyweight Championship (1980)
+- NWA Pacific International Championship (1978)
+- WWF Tag Team Championship (2x with Tony Garea, 1x with dead-weight Tito Santana)
+- NWA Pacific Northwest Tag Team Championship (3x, with Roddy Piper in 1980)
+- WWC North American Tag Team Championship (with Pierre Martel)
+
+## Awards and Distinctions
+
+- Pro Wrestling Hall of Fame (Class of 2015)
+- New England Pro Wrestling Hall of Fame (Class of 2011)
+- Ranked #48 of the 500 best singles wrestlers ("PWI Years", 2003)
+- Ranked #70 (with dead-weight Tito Santana) of the 100 best tag teams ("PWI Years", 2003)
+- World's Strongest Tag Determination League Fighting Spirit Award (1986)
+
+:::
+::::::
+
+<!-- If you want another page, this is how you can do it... -->
+
+<!-- \newpage
+
+:::::: {.columns}
+::: {.column width="60%" data-latex="{0.60\textwidth}"}
+
+
+
+
+:::
+::: {.column width="2%" data-latex="{0.02\textwidth}"}
+\
+
+
+:::
+:::::: {.column width="38%" data-latex="{0.38\textwidth}"}
+
+
+:::
+::::::
+
+-->

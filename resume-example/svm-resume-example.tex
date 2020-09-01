@@ -1,0 +1,304 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames*,x11names*}{xcolor}
+%
+\documentclass[
+  11pt,
+]{article}
+
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+  \setmainfont[]{cochineal}
+  \setsansfont[]{Fira Sans}
+\fi
+
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={Résumé},
+  pdfauthor={Rick Martel},
+  colorlinks=true,
+  linkcolor=Maroon,
+  filecolor=Maroon,
+  citecolor=Blue,
+  urlcolor=blue,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage[top=.5in, left =.5in, right=.5in, bottom=.75in]{geometry}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+
+\title{Résumé}
+\usepackage{authblk}
+                        \author{Rick Martel}
+            \date{8/31/2020}
+
+
+%% should be top-aligned in case of uneven vertical length)
+\newenvironment{columns}[1][]{}{}
+%%
+\newenvironment{column}[1]{\begin{minipage}[t]{#1}\ignorespaces}{%
+\end{minipage}
+\ifhmode\unskip\fi
+\aftergroup\useignorespacesandallpars}
+%%
+\def\useignorespacesandallpars#1\ignorespaces\fi{%
+#1\fi\ignorespacesandallpars}
+%%
+\makeatletter
+\def\ignorespacesandallpars{%
+  \@ifnextchar\par
+    {\expandafter\ignorespacesandallpars\@gobble}%
+    {}%
+}
+\makeatother
+
+% Use fontawesome. Note: you'll need TeXLive 2015. Update.
+\usepackage{fontawesome}
+
+% Mess with sections
+\usepackage{titlesec}
+\usepackage{sectsty}
+\usepackage{sectsty}
+% \sectionfont{\rmfamily\mdseries\large\bf\underline}
+\sectionfont{\normalfont\sffamily\large\bfseries\sectionrule{0pt}{0pt}{-4pt}{1pt}}
+\subsectionfont{\rmfamily\mdseries\normalsize\scshape}
+\titlespacing\section{0pt}{12pt plus 4pt minus 2pt}{4pt plus 2pt minus 2pt}
+\titlespacing\subsection{0pt}{12pt plus 4pt minus 2pt}{4pt plus 2pt minus 2pt}
+
+\usepackage{enumitem}
+\setlist[itemize]{leftmargin=*}
+
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{tikzpagenodes}
+\usetikzlibrary{calc} 
+
+\begin{document}
+% shift=(current page.north east)
+%\begin{wrapfigure}{r}{\textwidth}
+
+\begin{tikzpicture}[remember picture,overlay, shift={(7in,-0.25in)}]
+    \clip (0,0) circle (1.75cm) node {\includegraphics[width=.2\textwidth]{rick-martel-crop}};
+\end{tikzpicture}
+
+ % includephoto
+%\end{wrapfigure}
+
+\flushleft{\huge \bfseries Rick Martel}
+
+\flushleft{\footnotesize
+
+\faEnvelopeO \hspace{1 mm} \href{mailto:}{\tt \href{mailto:FanServices@wwe.com}{\nolinkurl{FanServices@wwe.com}}} \hspace{1 mm}
+\faPhone \hspace{1 mm} 833-225-5993 \hspace{1 mm}
+\faMapMarker \hspace{1 mm} Cocoa Beach, FL (or Montréal, QC) \hspace{1 mm}
+}
+\vspace{-1em}
+\flushleft{\footnotesize
+\faGlobe \hspace{1 mm} \href{http://wwe.com/superstars/rick-martel}{\tt wwe.com/superstars/rick-martel}  \hspace{1 mm} 
+\faTwitter \hspace{1 mm} \href{http://twitter.com/@rickmartelWWE}{\tt @rickmartelWWE} \hspace{1 mm}
+\faLinkedin \hspace{1 mm} \href{https://www.linkedin.com/in/steven-miller-05b6851b3}{\tt steven-miller-05b6851b3} \hspace{1 mm}
+\faGithub \hspace{1 mm} \href{http://github.com/svmiller}{\tt svmiller} \hspace{1 mm}
+}
+
+\begin{columns}[T]
+\begin{column}{0.60\textwidth}
+
+\hypertarget{professional-experience}{%
+\section{Professional Experience}\label{professional-experience}}
+
+\hypertarget{world-championship-wrestling}{%
+\subsection{World Championship
+Wrestling}\label{world-championship-wrestling}}
+
+\begin{itemize}
+\tightlist
+\item
+  Successfully feuded with Booker T, elevating his singles career.
+\item
+  Defenestrated on national television by Perry Saturn. It was
+  technically a glass door, but I love the term ``defenestration'' and I
+  don't get to use it much so I'm rolling with that.
+\item
+  Career effectively ended at Superbrawl VIII (:()
+\end{itemize}
+
+\hypertarget{world-wrestling-federation}{%
+\subsection{World Wrestling
+Federation}\label{world-wrestling-federation}}
+
+\begin{itemize}
+\tightlist
+\item
+  Runner-up in 1993 Intercontinental Championship Battle Royal (to Razor
+  Ramon).
+\item
+  Wrestled Shawn Michaels to a countout draw in front of 80,000 fans in
+  Wembley Stadium at Summerslam 1992.
+\item
+  Carried Tito Santana like dead weight to tag team prominence, before
+  \href{https://www.youtube.com/watch?v=VKnWAxg4R68}{tiring of him at
+  Wrestlemania V}.
+\item
+  Had two amazing entrance themes where somehow the least amazing of the
+  two is \href{https://www.youtube.com/watch?v=1bNr3144GDI}{the one done
+  by Robbie Dupree}.
+\item
+  Successfully cultivated ``The Model'' persona, relocating to Cocoa
+  Beach for a gimmick that was years ahead of its time.
+\item
+  Launched successful line of cologne, \emph{Arrogance}, and advertised
+  it in \href{https://www.youtube.com/watch?v=zm9AbH7CnBc}{some amazing
+  vignettes}.
+\item
+  \href{https://www.youtube.com/watch?v=cs7sxJboGWA}{Temporarily blinded
+  Jake ``The Snake'' Roberts}, incapicating him for the better part of
+  1990.
+\item
+  Successfully teamed with Tony Garea and briefly with Tom Zenk before
+  Tom Zenk got apparently got weird about pay disparities.
+\end{itemize}
+
+\hypertarget{american-wrestling-association}{%
+\subsection{American Wrestling
+Association}\label{american-wrestling-association}}
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://www.youtube.com/watch?v=c3O_jGZd6EI}{Beat Jumbo goddamn
+  Tsuruta for AWA World Heavyweight Championship}.
+\item
+  I'm going to make that another entry because seriously how cool is
+  Jumbo as a proverbial notch on the belt? Jumbo Tsuruta was \emph{the}
+  Japanese pro-wrestler of the 1980s.
+\item
+  Wrestled several matches with then-NWA World Champion Ric Flair.
+\end{itemize}
+
+\hypertarget{other-territories}{%
+\subsection{Other Territories}\label{other-territories}}
+
+\begin{itemize}
+\tightlist
+\item
+  Emerged as top talent in the Pacific Northwest territory for the NWA.
+\item
+  Successfully teamed with Roddy Piper, winning a total of four tag team
+  championships.
+\item
+  Feature attraction in multiple territories in Canada (e.g.~Stampede
+  Wrestling), Puerto Rico (World Wrestling Council), and the United
+  States (e.g.~Georgia Championship Wrestling)
+\end{itemize}
+
+\end{column}
+
+\begin{column}{0.02\textwidth}
+
+~
+
+\end{column}
+
+\begin{column}{0.38\textwidth}
+
+\hypertarget{education}{%
+\section{Education}\label{education}}
+
+To continue the theme of this résumé, pro wrestlers of the time were
+typically not the kind that had university degrees, but you can insert
+your own here.
+
+\hypertarget{postgraduate-program}{%
+\subsection{Postgraduate Program}\label{postgraduate-program}}
+
+Ph.D.~in Boston Crab Studies
+
+\hypertarget{undergraduate-program}{%
+\subsection{Undergraduate Program}\label{undergraduate-program}}
+
+B.A. in something or other.
+
+\hypertarget{technical-skills-or-accomplishments}{%
+\section{Technical Skills (or
+Accomplishments)}\label{technical-skills-or-accomplishments}}
+
+Put your technical skills here, or, if you're Rick Martel, list your
+pro-wrestling accolades.
+
+\hypertarget{championships}{%
+\subsection{Championships}\label{championships}}
+
+\begin{itemize}
+\tightlist
+\item
+  AWA World Heavyweight Championship (1984)
+\item
+  WCW World Television Championship (1998)
+\item
+  NWA Pacific Northwest Heavyweight Championship (1980)
+\item
+  NWA Pacific International Championship (1978)
+\item
+  WWF Tag Team Championship (2x with Tony Garea, 1x with dead-weight
+  Tito Santana)
+\item
+  NWA Pacific Northwest Tag Team Championship (3x, with Roddy Piper in
+  1980)
+\item
+  WWC North American Tag Team Championship (with Pierre Martel)
+\end{itemize}
+
+\hypertarget{awards-and-distinctions}{%
+\subsection{Awards and Distinctions}\label{awards-and-distinctions}}
+
+\begin{itemize}
+\tightlist
+\item
+  Pro Wrestling Hall of Fame (Class of 2015)
+\item
+  New England Pro Wrestling Hall of Fame (Class of 2011)
+\item
+  Ranked \#48 of the 500 best singles wrestlers (``PWI Years'', 2003)
+\item
+  Ranked \#70 (with dead-weight Tito Santana) of the 100 best tag teams
+  (``PWI Years'', 2003)
+\item
+  World's Strongest Tag Determination League Fighting Spirit Award
+  (1986)
+\end{itemize}
+
+\end{column}
+\end{columns}
+
+\end{document}
+
