@@ -147,7 +147,7 @@ author}:
 \makeatother
 
 
-\title{Another Pandoc Markdown Article Starter and Template \thanks{Replication files are available on the author's Github account
+\title{Another Pandoc Markdown Article Starter and Template\thanks{Replication files are available on the author's Github account
 (\url{http://github.com/svmiller/svm-r-markdown-templates}).
 \textbf{Current version}: September 11, 2020; \textbf{Corresponding
 author}:
@@ -162,9 +162,9 @@ author}:
 
 \usepackage{titlesec}
 
-% \sffamily
-\titleformat*{\section}{\normalsize\bfseries}
-\titleformat*{\subsection}{\normalsize\itshape}
+% \sffamily\uppercase
+\titleformat*{\section}{\large\bfseries\sffamily\uppercase}
+\titleformat*{\subsection}{\small\bfseries\sffamily\uppercase}
 \titleformat*{\subsubsection}{\normalsize\itshape}
 \titleformat*{\paragraph}{\normalsize\itshape}
 \titleformat*{\subparagraph}{\normalsize\itshape}
@@ -208,6 +208,7 @@ author}:
 % Add an option for endnotes. -----
 
 
+
 \begin{document}
 
 % \textsf{\textbf{This is sans-serif bold text.}}
@@ -219,7 +220,7 @@ author}:
 {% \usefont{T1}{pnc}{m}{n}
 \setlength{\parindent}{0pt}
 \thispagestyle{plain}
-{\fontsize{18}{20}\selectfont\raggedright
+{%\fontsize{18}{20}\selectfont\raggedright
 \maketitle  % title \par
 
 }
@@ -279,8 +280,8 @@ massa.}
 \setlength{\parindent}{16pt}
 \setlength{\parskip}{0pt}
 
-\hypertarget{r-markdown}{%
-\section{R Markdown}\label{r-markdown}}
+\hypertarget{introduction}{%
+\section{Introduction}\label{introduction}}
 
 \kant[1-5]
 
@@ -288,12 +289,27 @@ This is an R Markdown document. Markdown is a simple formatting syntax
 for authoring HTML, PDF, and MS Word documents. For more details on
 using R Markdown see \url{http://rmarkdown.rstudio.com}.
 
+\hypertarget{literature-review}{%
+\section{Literature Review}\label{literature-review}}
+
+\kant[6-14]
+
+\hypertarget{research-design}{%
+\section{Research Design}\label{research-design}}
+
+\kant[15]
+
 \hypertarget{another-subsection-from-kant-who-writes-as-if-he-does-not-want-to-be-read}{%
 \subsection{Another Subsection From Kant, Who Writes as If He Does Not
 Want to Be
 Read}\label{another-subsection-from-kant-who-writes-as-if-he-does-not-want-to-be-read}}
 
-\kant[6-13]
+\kant[16-18]
+
+\hypertarget{another-subsection}{%
+\subsection{Another Subsection}\label{another-subsection}}
+
+\kant[19-23]
 
 When you click the \textbf{Knit} button a document will be generated
 that includes both content as well as the output of any embedded R code
@@ -315,6 +331,11 @@ chunks within the document. You can embed an R code chunk like this:
 ##  Max.   :25.0   Max.   :120.00
 \end{verbatim}
 
+\hypertarget{results}{%
+\section{Results}\label{results}}
+
+\kant[24]
+
 \hypertarget{including-plots}{%
 \subsection{Including Plots}\label{including-plots}}
 
@@ -325,7 +346,12 @@ You can also embed plots, for example:
 Note that the \texttt{echo\ =\ FALSE} parameter was added to the code
 chunk to prevent printing of the R code that generated the plot.
 
-\kant[14-25]
+\kant[25-35]
+
+\hypertarget{conclusion}{%
+\section{Conclusion}\label{conclusion}}
+
+\kant[36-40]
 
 \end{document}
 

@@ -441,7 +441,7 @@ $endif$
 
 
 $if(title)$
-\title{$title$$if(subtitle)$: $subtitle$$endif$ $if(anonymous)$$else$$if(thanks)$\thanks{$thanks$} $endif$$endif$ }
+\title{$title$$if(subtitle)$: $subtitle$$endif$$if(anonymous)$$else$$if(thanks)$\thanks{$thanks$} $endif$$endif$ }
 $endif$ 
 
 
@@ -453,9 +453,9 @@ $endif$
 
 \usepackage{titlesec}
 
-% $if(sansitup)$\sffamily$else$$endif$
-\titleformat*{\section}{\normalsize\bfseries}
-\titleformat*{\subsection}{\normalsize\itshape}
+% $if(sansitup)$\sffamily\uppercase$else$$endif$
+\titleformat*{\section}{\large\bfseries$if(sansitup)$\sffamily\uppercase$else$$endif$}
+\titleformat*{\subsection}{$if(sansitup)$\small\bfseries\sffamily\uppercase$else$\normalsize\itshape$endif$}
 \titleformat*{\subsubsection}{\normalsize\itshape}
 \titleformat*{\paragraph}{\normalsize\itshape}
 \titleformat*{\subparagraph}{\normalsize\itshape}
@@ -504,6 +504,11 @@ $if(endnotes)$
 \let\footnote=\endnote
 $endif$
 
+$if(appendix)$
+\renewcommand*\thetable{$appendixletter$.\arabic{table}}
+\renewcommand*\thefigure{$appendixletter$.\arabic{figure}}
+$endif$
+
 \begin{document}
 
 % \textsf{\textbf{This is sans-serif bold text.}}
@@ -518,7 +523,7 @@ $if(title)$
 {% \usefont{T1}{pnc}{m}{n}
 \setlength{\parindent}{0pt}
 \thispagestyle{plain}
-{\fontsize{18}{20}\selectfont\raggedright
+{%\fontsize{18}{20}\selectfont\raggedright
 \maketitle  % title \par
 
 }
@@ -531,7 +536,7 @@ $if(title)$
    $if(sansitup)$
 $if(anonymous)$\hfill $else$$for(author)$\MakeUppercase{\textsf{\Large $author.name$}}, \small{$author.affiliation$}  $sep$ \par \vskip -5.5pt $endfor$ $endif$
 $else$
-$if(anonymous)$\hfill $else$$for(author)$\MakeUppercase{$author.name$}, \emph{\small $author.affiliation$}  $sep$ \par \vskip -5.5pt $endfor$ $endif$
+$if(anonymous)$\hfill $else$$for(author)$\MakeUppercase{$author.name$}, \small{$author.affiliation$}  $sep$ \par \vskip -5.5pt $endfor$ $endif$
 $endif$
 
 }
