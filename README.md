@@ -5,6 +5,7 @@ I love R Markdown and effectively abandoned LaTeX for it. I have a suite of R Ma
  
 ## Related Reading
 
+- [Another Academic R Markdown Article/Manuscript Template](http://svmiller.com/blog/2020/09/another-rmarkdown-article-template/)
 - [An R Markdown Template for a Non Academic Résumé](http://svmiller.com/blog/2020/09/rmarkdown-template-non-academic-resume/)
 - [An R Markdown Template for Beamer Presentations](http://svmiller.com/blog/2019/08/r-markdown-template-beamer-presentations/)
 - [An R Markdown Template for Memos](http://svmiller.com/blog/2019/06/r-markdown-memo-template/)
