@@ -465,9 +465,7 @@ $endif$
 % See: https://tex.stackexchange.com/questions/2275/keeping-tables-figures-close-to-where-they-are-mentioned
 \usepackage[section]{placeins}
 
-$for(header-includes)$
-$header-includes$
-$endfor$
+
 
 \makeatletter
 \@ifpackageloaded{hyperref}{}{%
@@ -511,6 +509,7 @@ $if(appendix)$
 \renewcommand*\thefigure{$appendixletter$.\arabic{figure}}
 $endif$
 
+% This will better treat References as a section when using natbib
 % https://tex.stackexchange.com/questions/49962/bibliography-title-fontsize-problem-with-bibtex-and-the-natbib-package
 $if(natbib)$ 
 \renewcommand\bibsection{%
@@ -520,6 +519,16 @@ $if(natbib)$
 $else$
 $endif$
 
+% set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
+
+
+$for(header-includes)$
+$header-includes$
+$endfor$
 \begin{document}
 
 % \textsf{\textbf{This is sans-serif bold text.}}
