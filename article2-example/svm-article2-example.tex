@@ -179,10 +179,7 @@ author}:
 % See: https://tex.stackexchange.com/questions/2275/keeping-tables-figures-close-to-where-they-are-mentioned
 \usepackage[section]{placeins}
 
-\usepackage{longtable}
-\LTcapwidth=.95\textwidth
-\linespread{1.05}
-\usepackage{hyperref}
+
 
 \makeatletter
 \@ifpackageloaded{hyperref}{}{%
@@ -217,12 +214,24 @@ author}:
 
 
 
+% This will better treat References as a section when using natbib
 % https://tex.stackexchange.com/questions/49962/bibliography-title-fontsize-problem-with-bibtex-and-the-natbib-package
 \renewcommand\bibsection{%
    \section*{References}%
    \markboth{\MakeUppercase{\refname}}{\MakeUppercase{\refname}}%
   }%
 
+% set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
+
+
+\usepackage{longtable}
+\LTcapwidth=.95\textwidth
+\linespread{1.05}
+\usepackage{hyperref}
 \begin{document}
 
 % \textsf{\textbf{This is sans-serif bold text.}}
@@ -332,6 +341,12 @@ Read}\label{another-subsection-from-kant-who-writes-as-if-he-does-not-want-to-be
 
 \kant[19-23]
 
+\begin{figure}
+\centering
+\includegraphics{svm-article2-example_files/figure-latex/unnamed-chunk-1-1.pdf}
+\caption{A Simple ggplot with the mtcars Data in R}
+\end{figure}
+
 When you click the \textbf{Knit} button a document will be generated
 that includes both content as well as the output of any embedded R code
 chunks within the document. You can embed an R code chunk like this:
@@ -368,6 +383,14 @@ Note that the \texttt{echo\ =\ FALSE} parameter was added to the code
 chunk to prevent printing of the R code that generated the plot.
 
 \kant[25-35]
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{plot}\NormalTok{(mtcars)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{svm-article2-example_files/figure-latex/unnamed-chunk-2-1.pdf}
 
 \hypertarget{conclusion}{%
 \section{Conclusion}\label{conclusion}}
