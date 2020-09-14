@@ -453,7 +453,7 @@ $endif$
 
 % $if(sansitup)$\sffamily\uppercase$else$$endif$
 \titleformat*{\section}{\large\bfseries$if(sansitup)$\sffamily\uppercase$else$$endif$}
-\titleformat*{\subsection}{$if(sansitup)$\small\bfseries\sffamily\uppercase$else$\normalsize\itshape$endif$}
+\titleformat*{\subsection}{$if(sansitup)$\bfseries\sffamily$else$\normalsize\itshape$endif$} % \small\uppercase
 \titleformat*{\subsubsection}{\normalsize\itshape}
 \titleformat*{\paragraph}{\normalsize\itshape}
 \titleformat*{\subparagraph}{\normalsize\itshape}
@@ -509,6 +509,15 @@ $endif$
 $if(appendix)$
 \renewcommand*\thetable{$appendixletter$.\arabic{table}}
 \renewcommand*\thefigure{$appendixletter$.\arabic{figure}}
+$endif$
+
+% https://tex.stackexchange.com/questions/49962/bibliography-title-fontsize-problem-with-bibtex-and-the-natbib-package
+$if(natbib)$ 
+\renewcommand\bibsection{%
+   \section*{References}%
+   \markboth{\MakeUppercase{\refname}}{\MakeUppercase{\refname}}%
+  }%
+$else$
 $endif$
 
 \begin{document}

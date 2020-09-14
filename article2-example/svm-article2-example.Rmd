@@ -1,6 +1,7 @@
 ---
 output: 
   pdf_document:
+    citation_package: natbib
     latex_engine: xelatex
     keep_tex: true
     dev: cairo_pdf
@@ -27,11 +28,19 @@ fontsize: 11pt
 endnote: no
 # pandocparas: TRUE
 sansitup: TRUE
+bibliography: master.bib
+header-includes:
+  - \usepackage{longtable}
+  - \LTcapwidth=.95\textwidth
+  - \linespread{1.05}
+  - \usepackage{hyperref}
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+
+
 
 # Introduction
 
@@ -41,7 +50,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 \kant[2-5]
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>. Here's an obligatory citation to @xie2013ddrk.
 
 # Literature Review
 
@@ -85,3 +94,5 @@ Note that the `echo = FALSE` parameter was added to the code chunk to prevent pr
 # Conclusion
 
 \kant[36-40]
+
+\newpage

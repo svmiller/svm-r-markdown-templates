@@ -38,12 +38,12 @@
 \makeatother
 \usepackage{xcolor}
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
-\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
-\hypersetup{
-  pdftitle={Another Pandoc Markdown Article Starter and Template},
-  pdfkeywords={pandoc, r markdown, knitr},
-  hidelinks,
-  pdfcreator={LaTeX via pandoc}}
+% \IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+% \hypersetup{
+% %   pdftitle={Another Pandoc Markdown Article Starter and Template},
+% % % % % %   pdfkeywords={pandoc, r markdown, knitr},
+% % %   hidelinks,
+% %   pdfcreator={LaTeX via pandoc}}
 \urlstyle{same} % disable monospaced font for URLs
 \usepackage[margin=1in]{geometry}
 \usepackage{color}
@@ -103,17 +103,20 @@
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+
 \ifluatex
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
+\usepackage[]{natbib}
+\bibliographystyle{apsr}
 
 \title{Another Pandoc Markdown Article Starter and Template\thanks{Replication files are available on the author's Github account
 (\url{http://github.com/svmiller/svm-r-markdown-templates}).
-\textbf{Current version}: September 11, 2020; \textbf{Corresponding
+\textbf{Current version}: September 14, 2020; \textbf{Corresponding
 author}:
 \href{mailto:steven.v.miller@gmail.com}{\nolinkurl{steven.v.miller@gmail.com}}.}}
 \author{true \and true \and true}
-\date{September 11, 2020}
+\date{September 14, 2020}
 
 % Jesus, okay, everything above this comment is default Pandoc LaTeX template. -----
 % ----------------------------------------------------------------------------------
@@ -149,7 +152,7 @@ author}:
 
 \title{Another Pandoc Markdown Article Starter and Template\thanks{Replication files are available on the author's Github account
 (\url{http://github.com/svmiller/svm-r-markdown-templates}).
-\textbf{Current version}: September 11, 2020; \textbf{Corresponding
+\textbf{Current version}: September 14, 2020; \textbf{Corresponding
 author}:
 \href{mailto:steven.v.miller@gmail.com}{\nolinkurl{steven.v.miller@gmail.com}}.}  }
 
@@ -164,7 +167,7 @@ author}:
 
 % \sffamily\uppercase
 \titleformat*{\section}{\large\bfseries\sffamily\uppercase}
-\titleformat*{\subsection}{\small\bfseries\sffamily\uppercase}
+\titleformat*{\subsection}{\bfseries\sffamily} % \small\uppercase
 \titleformat*{\subsubsection}{\normalsize\itshape}
 \titleformat*{\paragraph}{\normalsize\itshape}
 \titleformat*{\subparagraph}{\normalsize\itshape}
@@ -175,6 +178,11 @@ author}:
 % This should regulate where figures float
 % See: https://tex.stackexchange.com/questions/2275/keeping-tables-figures-close-to-where-they-are-mentioned
 \usepackage[section]{placeins}
+
+\usepackage{longtable}
+\LTcapwidth=.95\textwidth
+\linespread{1.05}
+\usepackage{hyperref}
 
 \makeatletter
 \@ifpackageloaded{hyperref}{}{%
@@ -208,6 +216,12 @@ author}:
 % Add an option for endnotes. -----
 
 
+
+% https://tex.stackexchange.com/questions/49962/bibliography-title-fontsize-problem-with-bibtex-and-the-natbib-package
+\renewcommand\bibsection{%
+   \section*{References}%
+   \markboth{\MakeUppercase{\refname}}{\MakeUppercase{\refname}}%
+  }%
 
 \begin{document}
 
@@ -293,7 +307,8 @@ Introduction}\label{a-subsection-in-the-introduction}}
 
 This is an R Markdown document. Markdown is a simple formatting syntax
 for authoring HTML, PDF, and MS Word documents. For more details on
-using R Markdown see \url{http://rmarkdown.rstudio.com}.
+using R Markdown see \url{http://rmarkdown.rstudio.com}. Here's an
+obligatory citation to \citet{xie2013ddrk}.
 
 \hypertarget{literature-review}{%
 \section{Literature Review}\label{literature-review}}
@@ -358,6 +373,10 @@ chunk to prevent printing of the R code that generated the plot.
 \section{Conclusion}\label{conclusion}}
 
 \kant[36-40]
+
+\newpage
+
+  \bibliography{master.bib}
 
 \end{document}
 
