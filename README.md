@@ -1,9 +1,13 @@
-Steve's R Markdown Templates
-============================
+# Check out the R Package
+
+I'll be eventually migrating this repository to an R package. The development version of this package is [available on my Github](https://github.com/svmiller/stevetemplates). The contents of the R package are so far not total, but they eventually will be. Consider giving it a look.
+
+### Steve's R Markdown Templates (Legacy Repo)
+
 
 I love R Markdown and effectively abandoned LaTeX for it. I have a suite of R Markdown templates for 1) academic manuscripts, 2) Beamer presentations, and 3) academic syllabi. You can find them here.
  
-## Related Reading
+### Related Reading
 
 - [Another Academic R Markdown Article/Manuscript Template](http://svmiller.com/blog/2020/09/another-rmarkdown-article-template/)
 - [An R Markdown Template for a Non Academic Résumé](http://svmiller.com/blog/2020/09/rmarkdown-template-non-academic-resume/)
