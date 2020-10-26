@@ -1,0 +1,239 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  11pt,
+]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+  \setmainfont[]{cochineal}
+  \setmonofont[]{Fira Code}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}
+    }
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage[margin=1in]{geometry}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+
+\ifluatex
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+
+\author{Steven V. Miller}
+\date{26 October 2020}
+
+% Jesus, okay, everything above this comment is default Pandoc LaTeX template. -----
+% ----------------------------------------------------------------------------------
+% I think I had assumed beamer and LaTex were somehow different templates.
+
+
+\usepackage{kantlipsum}
+
+\usepackage{abstract}
+\renewcommand{\abstractname}{}    % clear the title
+\renewcommand{\absnamepos}{empty} % originally center
+
+\renewenvironment{abstract}
+ {{%
+    \setlength{\leftmargin}{0mm}
+    \setlength{\rightmargin}{\leftmargin}%
+  }%
+  \relax}
+ {\endlist}
+
+\makeatletter
+\def\@maketitle{%
+  \newpage
+%  \null
+%  \vskip 2em%
+%  \begin{center}%
+  \let \footnote \thanks
+      {\fontsize{18}{20}\selectfont\raggedright  \setlength{\parindent}{0pt} \@title \par}
+    }
+%\fi
+\makeatother
+
+
+
+
+
+%\author{\Large \vspace{0.05in} \newline\normalsize\emph{}  }
+
+
+\date{}
+
+\usepackage{titlesec}
+
+% 
+\titleformat*{\section}{\large\bfseries}
+\titleformat*{\subsection}{\normalsize\itshape} % \small\uppercase
+\titleformat*{\subsubsection}{\normalsize\itshape}
+\titleformat*{\paragraph}{\normalsize\itshape}
+\titleformat*{\subparagraph}{\normalsize\itshape}
+
+% add some other packages ----------
+
+% \usepackage{multicol}
+% This should regulate where figures float
+% See: https://tex.stackexchange.com/questions/2275/keeping-tables-figures-close-to-where-they-are-mentioned
+\usepackage[section]{placeins}
+
+
+
+\makeatletter
+\@ifpackageloaded{hyperref}{}{%
+\ifxetex
+  \PassOptionsToPackage{hyphens}{url}\usepackage[setpagesize=false, % page size defined by xetex
+              unicode=false, % unicode breaks when used with xetex
+              xetex]{hyperref}
+\else
+  \PassOptionsToPackage{hyphens}{url}\usepackage[draft,unicode=true]{hyperref}
+\fi
+}
+
+\@ifpackageloaded{color}{
+    \PassOptionsToPackage{usenames,dvipsnames}{color}
+}{%
+    \usepackage[usenames,dvipsnames]{color}
+}
+\makeatother
+\hypersetup{breaklinks=true,
+            bookmarks=true,
+            pdfauthor={ ()},
+             pdfkeywords = {},  
+            pdftitle={},
+            colorlinks=true,
+            citecolor=blue,
+            urlcolor=blue,
+            linkcolor=magenta,
+            pdfborder={0 0 0}}
+\urlstyle{same}  % don't use monospace font for urls
+
+% Add an option for endnotes. -----
+
+
+
+% This will better treat References as a section when using natbib
+% https://tex.stackexchange.com/questions/49962/bibliography-title-fontsize-problem-with-bibtex-and-the-natbib-package
+
+% set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
+
+
+\linespread{1.05}
+
+\newtheorem{hypothesis}{Hypothesis}
+
+\usepackage{fontawesome}
+
+\newcommand{\blankline}{\quad\pagebreak[2]}
+\usepackage{graphicx}
+
+\begin{document}
+
+
+
+\hfill
+\begin{minipage}[t]{1\textwidth}
+\raggedleft%
+{\bfseries Steven V. Miller }\\[.35ex]
+\emph{\small 698 Candlewood Lane\\
+Cabot Cove, ME USA} \\[.35ex]
+\faPhone \hspace{1 mm} \small{+1 555 867 5309} \\ 
+\faEnvelopeO \hspace{1 mm} \small{\tt \href{mailto:svmille@clemson.edu}{\nolinkurl{svmille@clemson.edu}}} \\ 
+\faGlobe \hspace{1 mm} \small{\href{http://svmiller.com}{\tt svmiller.com}}\\ 
+\hspace{1cm} \\
+ 26 October 2020 \\ 
+\end{minipage}
+
+% \vspace*{1em} 
+
+\vspace*{1em}
+
+Dear Sir or Madam:
+
+\vspace*{1em}
+
+
+% 26 October 2020
+% 
+% \vspace*{1em} 
+% 
+
+% % \setlength{\parindent}{16pt}
+% \setlength{\parskip}{0pt}
+% 
+I write to apply for your recently advertised opening of data scientist
+and haberdasher at ACME Corp.. I think I would be awesome there if you
+gave me money to do stuff for you. Please give me money to do stuff for
+you.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac
+ipsum vel lacus eleifend ultrices. Donec metus lectus, pulvinar faucibus
+pretium id, sollicitudin vel purus. Nulla et metus eu quam tincidunt
+interdum. Phasellus mi urna, pellentesque et auctor nec, pharetra
+ultrices ex. Curabitur pretium velit porttitor risus efficitur
+condimentum. Cum sociis natoque penatibus et magnis dis parturient
+montes, nascetur ridiculus mus. Cras et semper elit. Ut interdum semper
+venenatis. Nunc vitae massa ut ipsum laoreet posuere. Nulla non libero
+sed risus finibus mollis a at tellus. Suspendisse egestas sodales lorem.
+Vivamus eu massa quis lacus blandit mattis. Proin consectetur nunc at
+elit egestas scelerisque. Morbi vitae metus metus.
+
+Donec mi felis, placerat vitae metus eu, lobortis suscipit quam. Vivamus
+finibus aliquam tempus. Nulla interdum interdum risus ut rhoncus. Nulla
+interdum ligula ac ligula porta convallis. Duis rutrum ante quis dolor
+dignissim maximus. Phasellus at vulputate tortor, vitae laoreet felis.
+Pellentesque sed orci vulputate, vestibulum magna et, tincidunt justo.
+Sed elementum libero quis sapien vestibulum, sit amet consectetur est
+porttitor. Etiam in turpis in erat vehicula sollicitudin id eget libero.
+Suspendisse potenti. Phasellus in felis nibh. Proin laoreet laoreet arcu
+accumsan finibus.
+
+Morbi auctor pulvinar metus et facilisis. Cras eget mollis lorem. In hac
+habitasse platea dictumst. Fusce facilisis nec ligula in egestas.
+Maecenas turpis tortor, accumsan eget lacus facilisis, interdum egestas
+nibh. In efficitur dictum accumsan. Etiam a porta ante. Ut dui nibh,
+vestibulum in aliquet et, mollis nec enim.
+
+Best regards,
+
+\includegraphics[width=0.3\linewidth]{john-hancock}
+
+Firstname Lastname
+
+\end{document}
+

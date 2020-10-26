@@ -1,0 +1,50 @@
+---
+output: 
+  pdf_document:
+    keep_tex: TRUE
+    latex_engine: xelatex
+    template: ../svm-latex-cover-letter.tex
+geometry: margin=1in
+header-includes:
+  - \linespread{1.05}
+
+author: Steven V. Miller
+address: |
+    | 698 Candlewood Lane
+    | Cabot Cove, ME USA
+email: "svmille@clemson.edu"
+url: svmiller.com
+phone: +1 555 867 5309
+fontsize: 11pt
+mainfont: cochineal
+monofont: Fira Code
+
+fontawesome: TRUE
+date: "`r format(Sys.time(), '%d %B %Y')`"
+greetings: "Dear Sir or Madam:"
+---
+
+```{r setup, include=F}
+
+
+place <- "ACME Corp."
+jobtitle <- "data scientist and haberdasher"
+
+
+```
+
+I write to apply for your recently advertised opening of `r jobtitle` at `r place`. I think I would be awesome there if you gave me money to do stuff for you. Please give me money to do stuff for you.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac ipsum vel lacus eleifend ultrices. Donec metus lectus, pulvinar faucibus pretium id, sollicitudin vel purus. Nulla et metus eu quam tincidunt interdum. Phasellus mi urna, pellentesque et auctor nec, pharetra ultrices ex. Curabitur pretium velit porttitor risus efficitur condimentum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras et semper elit. Ut interdum semper venenatis. Nunc vitae massa ut ipsum laoreet posuere. Nulla non libero sed risus finibus mollis a at tellus. Suspendisse egestas sodales lorem. Vivamus eu massa quis lacus blandit mattis. Proin consectetur nunc at elit egestas scelerisque. Morbi vitae metus metus.
+
+Donec mi felis, placerat vitae metus eu, lobortis suscipit quam. Vivamus finibus aliquam tempus. Nulla interdum interdum risus ut rhoncus. Nulla interdum ligula ac ligula porta convallis. Duis rutrum ante quis dolor dignissim maximus. Phasellus at vulputate tortor, vitae laoreet felis. Pellentesque sed orci vulputate, vestibulum magna et, tincidunt justo. Sed elementum libero quis sapien vestibulum, sit amet consectetur est porttitor. Etiam in turpis in erat vehicula sollicitudin id eget libero. Suspendisse potenti. Phasellus in felis nibh. Proin laoreet laoreet arcu accumsan finibus.
+
+Morbi auctor pulvinar metus et facilisis. Cras eget mollis lorem. In hac habitasse platea dictumst. Fusce facilisis nec ligula in egestas. Maecenas turpis tortor, accumsan eget lacus facilisis, interdum egestas nibh. In efficitur dictum accumsan. Etiam a porta ante. Ut dui nibh, vestibulum in aliquet et, mollis nec enim.
+
+Best regards,
+
+```{r eval=T, echo=FALSE, out.width='30%'}
+knitr::include_graphics('john-hancock.png', error=FALSE)
+```
+
+Firstname Lastname
