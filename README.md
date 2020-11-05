@@ -1,6 +1,12 @@
 # Check out the R Package
 
-I'll be eventually migrating this repository to an R package. The development version of this package is [available on my Github](https://github.com/svmiller/stevetemplates). The contents of the R package are so far not total, but they eventually will be. Consider giving it a look.
+`stevetemplates` is available on CRAN and will be hosting my R Markdown templates going forward. You can read more about it at [this Github repo](https://github.com/svmiller/stevetemplates). You can install it in R.
+
+```r
+install.packages("stevetemplates")
+```
+
+I'll be eventually migrating this repository to an R package. The development version of this package is [available on my Github](). The contents of the R package are so far not total, but they eventually will be. Consider giving it a look.
 
 ### Steve's R Markdown Templates (Legacy Repo)
 
