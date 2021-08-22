@@ -9,6 +9,17 @@ output:
 bibliography: master.bib
 header-includes:
   -  \usepackage{hyperref}
+  - \usepackage{array}   
+  - \usepackage{caption}
+  - \usepackage{graphicx}
+  - \usepackage{siunitx}
+  - \usepackage[table]{xcolor}
+  - \usepackage{multirow}
+  - \usepackage{hhline}
+  - \usepackage{calc}
+  - \usepackage{tabularx}
+  - \usepackage{fontawesome}
+  - \usepackage[para,online,flushleft]{threeparttable}
 biblio-style: apsr
 title: "A Pandoc Markdown Article Starter and Template"
 thanks: "Replication files are available on the author's Github account (http://github.com/svmiller). **Current version**: `r format(Sys.time(), '%B %d, %Y')`; **Corresponding author**: svmille@clemson.edu."
@@ -19,7 +30,7 @@ abstract: "This document provides an introduction to R Markdown, argues for its 
 keywords: "pandoc, r markdown, knitr"
 date: "`r format(Sys.time(), '%B %d, %Y')`"
 geometry: margin=1in
-fontfamily: mathpazo
+fontfamily: libertine
 fontsize: 11pt
 # spacing: double
 endnote: no
@@ -184,13 +195,20 @@ Within that code display, I enter my R code like this.
 
 
 ```{r, eval=FALSE, tidy = TRUE}
-library(stevemisc)
+library(stevedata)
 data(uniondensity)
+library(tidyverse)
 
-M1 <- lm(union ~ left + size + concen, data=uniondensity)
+uniondensity %>%
+  mutate(z_left = r2sd(left),
+         z_size = r2sd(size),
+         z_concen = r2sd(concen)) -> uniondensity
 
-library(arm)
-coefplot(M1)
+
+M1 <- lm(union ~ z_left + z_size + z_concen, data=uniondensity)
+
+# library(arm)
+arm::coefplot(M1)
 
 ```
 
@@ -199,19 +217,26 @@ The implications for workflow are faily substantial. Authors can rather quickly 
 It doesn't end there. In fact, here's what happens when `eval=FALSE` is omitted or changed to `eval=TRUE`. Now, the code runs within R. Observe.
 
 ```{r, eval=TRUE, tidy = TRUE, cache=FALSE, fig.cap="A Coefficient Plot", message=F, warning=F}
-library(stevemisc)
+library(stevedata)
 data(uniondensity)
+library(tidyverse)
 
-M1 <- lm(union ~ left + size + concen, data=uniondensity)
+uniondensity %>%
+  mutate(z_left = r2sd(left),
+         z_size = r2sd(size),
+         z_concen = r2sd(concen)) -> uniondensity
 
-library(arm)
-coefplot(M1)
+
+M1 <- lm(union ~ z_left + z_size + z_concen, data=uniondensity)
+
+# library(arm)
+arm::coefplot(M1)
 ```
 
 To get `knitr` to present the results of a table, add `results="asis"` to the brackets to start the R code chunk. The ensuing output will look like this (though the table may come on the next page).
 
 ```{r, eval=TRUE, tidy = TRUE, size="small", cache=FALSE, results="asis", message=F, warning=F}
-library(stevemisc)
+library(stevedata)
 data(uniondensity)
 library(stargazer)
 
@@ -223,9 +248,6 @@ stargazer(M1, title="A Handsome Table", header=FALSE)
 Adding `echo="FALSE"` inside the brackets to start the R chunk will omit the presentation of the R commands. It will just present the table. This provides substantial opportunity for authors in doing their analyses. Now, the analysis and presentation in the form of a polished manuscript can be effectively simultaneous.[^4]
 
 [^4]: I'm not sure if I'm ready to commit to this myself since my workflow is still largely derived from [Rob J. Hyndman's example](http://robjhyndman.com/hyndsight/workflow-in-r/). However, *knitr* has endless potential, especially when analyses can stored in cache, saved as chunks, or loaded in the preamble of a document to reference later in the manuscript.
-
-
-
 
 <!--
 # References
